@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>H-vision</title>
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile.css">
+    <script src="js/jquery.js"></script>
+
+    <script src="js/jquery.mobile-1.4.0.min.js"></script>
+    <script>
+        $(function() {
+            $( "[data-role='navbar']" ).navbar();
+            $( "[data-role='header'], [data-role='footer']" ).toolbar();
+        });
+        // Update the contents of the toolbars
+        $( document ).on( "pageshow", "[data-role='page']", function() {
+            // Each of the four pages in this demo has a data-title attribute
+            // which value is equal to the text of the nav button
+            // For example, on first page: <div data-role="page" data-title="Info">
+            var current = $( this ).jqmData( "title" );
+
+            if ( current == 'Задачи' ) {
+                $('.show-menu-button').show();
+            } else {
+                $('.show-menu-button').hide();
+            }
+
+            // Change the heading
+            $( "[data-role='header'] h1" ).text( current );
+            // Remove active class from nav buttons
+            $( "[data-role='navbar'] a.ui-btn-active" ).removeClass( "ui-btn-active" );
+            // Add active class to current nav button
+            $( "[data-role='navbar'] a" ).each(function() {
+                if ( $( this ).text() === current ) {
+                    $( this ).addClass( "ui-btn-active" );
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div data-role="header" data-position="fixed" data-theme="b">
+        <h1>Задачи</h1>
+        <a href="#nav-panel" class="show-menu-button" style="display:none;" data-icon="bars" data-iconpos="notext">Меню</a>
+    </div><!-- /header -->
+
+    <div data-role="page" data-title="Задачи" class="jqm-demos">
+
+        <div role="main" class="ui-content jqm-content jqm-fullwidth">
+        123
+        </div>
+        <div data-role="panel" data-position-fixed="true" data-theme="b" id="nav-panel">
+            <ul data-role="listview" data-theme="b" class="nav-search">
+                <li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>
+                <li><a href="page-d.html" data-prefetch="true" data-transition="slide" data-theme="b">Задължителни елементи</a>
+                <li><a href="#panel-fixed-page2">Избирaеми задачи</a></li>
+                <li><a href="#panel-fixed-page2">Въпроси</a></li>
+                <li><a href="#panel-fixed-page2">Обекти</a></li>
+            </ul>
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-prefetch="true" data-transition="fade" data-theme="b">Начало</a></li>
+                <li><a href="page-b.html" data-prefetch="true" data-transition="fade" data-theme="b">Задачи</a></li>
+                <li><a href="page-c.html" data-prefetch="true" data-transition="fade" data-theme="b" >Точкова система</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+
+</body>
+</html>
