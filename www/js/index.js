@@ -48,6 +48,6 @@ function fail(evt) {
 function createJson(text) {
     var json = JSON.parse(text);
 
-    $('.homePageText').html(json.message);
-    console.log(json);
+    $('.homePageText').text(json.message);
+    alert(json..message);
 }
