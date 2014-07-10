@@ -48,7 +48,5 @@ function fail(evt) {
 function createJson(text) {
     var json = JSON.parse(text);
 
-    console.log(json);
-    alert(json.id);
-
+    $('.homePageText').html(json.message);
 }
