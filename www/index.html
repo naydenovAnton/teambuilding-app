@@ -58,21 +58,21 @@
 </div>
 <!-- /page -->
 
-<div data-role="page" class="jqm-demos" id="score-page" data-title="GfK Teambuilding">
-    <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+<div data-role="page" id="score-page" class="jqm-demos" data-title="Текстово представяне">
+    <div data-role="header" data-theme="b" data-position="fixed">
         <h1>Точкова система</h1>
-        <a href="#nav-panel-score" data-icon="bars" data-iconpos="">Меню</a>
+        <a href="#nav-score-page" data-icon="bars" data-iconpos="">Меню</a>
     </div>
     <!-- /header -->
     <div role="main" class="ui-content jqm-content">
-        <div class="score-wrap" ></div>
+        <div class="score-wrap"></div>
     </div>
     <!-- /content -->
     <div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">
         <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
     </div>
     <!-- /footer -->
-    <div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="score-page-nav">
+    <div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-score-page">
         <ul data-role="listview">
             <li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>
             <li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>
@@ -90,7 +90,7 @@
 <!-- /page -->
 
 
-<div data-role="page" id="page-welcome-text" class="jqm-demos" data-title="GfK Teambuilding">
+<div data-role="page" id="page-welcome-text" class="jqm-demos" data-title="Текстово представяне">
     <div data-role="header" data-theme="b" data-position="fixed">
         <h1>Текстово представяне</h1>
         <a href="#nav-panel-welcome-text" data-icon="bars" data-iconpos="">Меню</a>
@@ -109,7 +109,7 @@
             <li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>
             <li><a href="#page-welcome-text" data-transition="none"
                    class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Текстово представяне</a></li>
-            <li><a href="#page-score" data-transition="none">Точкова система</a></li>
+            <li><a href="#score-page" data-transition="none">Точкова система</a></li>
             <li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>
             <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
             <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
@@ -120,144 +120,37 @@
 </div>
 <!-- /page -->
 
-<!--<div data-role="page" id="page-required">-->
-<!--<div data-role="header" data-theme="b" data-position="fixed">-->
-<!--<h1>Задължителни елементи</h1>-->
-<!--<a href="#nav-panel-required" data-icon="bars" data-iconpos="">Меню</a>-->
-<!--</div>-->
-<!--<!-- /header -->-->
-<!--<div role="main" class="ui-content jqm-content">-->
-<!--<div data-role="collapsible-set" data-theme="b">-->
-<!--<div data-role="collapsible">-->
-<!--<h3 style="position:relative">Полигон 1-->
-<!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
-<!--<div class="ui-field-contain">-->
-<!--<label for="slider-1" style="margin-right:-25px;">Точки:</label>-->
-<!--<input name="slider-1" id="slider-1" data-mini="true" min="0" max="100" value="0"-->
-<!--type="range">-->
-<!--</div>-->
-<!--</form>-->
-<!--</h3>-->
-<!--<div>-->
-<!--<p>-->
-<!--Нощите в Банско са ясни, изпълнени със звезди, но и много хладни. Ледени ветрове се спускат по-->
-<!--стръмните-->
-<!--планински склонове след залез слънце. За да оцелеете през хладните нощи, е важно доверието и-->
-<!--добрата-->
-<!--комуникация между вас.-->
-<!--</p>-->
+<div data-role="page" id="page-required" class="jqm-demos" data-title="Задължителни елементи">
+    <div data-role="header" data-theme="b" data-position="fixed">
+        <h1>Задължителни елементи</h1>
+        <a href="#nav-panel-required" data-icon="bars" data-iconpos="">Меню</a>
+    </div>
+    <!-- /header -->
+    <div role="main" class="ui-content jqm-content">
+        <div data-role="collapsible-set" data-theme="b" class="required-wrap">
 
-<!--<p>-->
-<!--Често единствения начин да се защитите от лошите метеорологични условия и да се сгреете е да си-->
-<!--направите-->
-<!--подслон и огнище пред него. Вашият екип е с ограничени ресурси &ndash; паднал е мрак и-->
-<!--разполагате само с-->
-<!--двама виждащи човека. Виждащите &ndash; нямат право да пипат. Всички останали могат да пипат, но-->
-<!--не виждат.-->
-<!--</p>-->
-
-<!--<p>-->
-<!--Вашата цел е да сглобите палатка, така че колкото може повече хора от групата да могат да влязат-->
-<!--в нея,-->
-<!--без да нарушават целостта й, да затворят ципа и да стоят 1 мин. Пред палатката трябва да има-->
-<!--изградено-->
-<!--огнище.-->
-<!--</p>-->
-
-<!--<p>Броят хора в палатката определя и допълнителния бонус точки, които може да получи вашият екип (1-->
-<!--точка на човек).</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div data-role="collapsible">-->
-<!--<h3>Полигон 2-->
-<!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
-<!--<div class="ui-field-contain">-->
-<!--<label for="slider-2" style="margin-right:-25px;">Точки:</label>-->
-<!--<input name="slider-2" id="slider-2" data-mini="true" min="0" max="100" value="0"-->
-<!--type="range">-->
-<!--</div>-->
-<!--</form>-->
-<!--</h3>-->
-<!--<div>-->
-<!--<p>-->
-<!--Пред вашия екип има 10 плочи с издълбани древни символи, пазени в Пирин планина, заровени-->
-<!--дълбоко в земята.-->
-<!--Разполагате с 2 минути да решите кой и как да подреди плочите на определеното за това място.-->
-<!--След това всеки един от екипа може да отваря само по 2 плочи.-->
-<!--</p>-->
-
-<!--<p>-->
-<!--Ако символите на двете плочи съвпадат, ги оставя обърнати нагоре, така че да се виждат. Ако не-->
-<!--съвпадат,-->
-<!--ги връща по местата им и предава щафетата на следващия участник в екипа.-->
-<!--</p>-->
-
-<!--<p>-->
-<!--Дали един поглед е бил достатъчен, за да запомни човека от вашия екип подредбата на-->
-<!--символите &ndash;-->
-<!--предстои да разберем. Това е вашето предизвикателство!-->
-<!--</p>-->
-
-<!--</div>-->
-<!--</div>-->
-<!--<div data-role="collapsible">-->
-<!--<h3>Полигон 3-->
-<!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
-<!--<div class="ui-field-contain">-->
-<!--<label for="slider-3" style="margin-right:-25px;">Точки:</label>-->
-<!--<input name="slider-3" id="slider-3" data-mini="true" min="0" max="100" value="0"-->
-<!--type="range">-->
-<!--</div>-->
-<!--</form>-->
-<!--</h3>-->
-<!--<div>-->
-<!--<p>-->
-<!--Според старата банска традиция за предаване на съобщение, която подсигурява безопасното и точно-->
-<!--преминаване на информация, целият екип се нарежда в права линия, като участниците са един до-->
-<!--друг. Всеки участник получава по-->
-<!--една част от тръба.-->
-<!--</p>-->
-
-<!--<p>Участниците поставят ръцете си на посочените места на тръбата, като нямат право да ги местят.-->
-<!--Човек от екипа на фасилитаторите пуска топче в тръбата на първия участник. Целта е топчето да-->
-<!--премине през тръбите на всички участници. Готови ли сте да работите заедно?</p>-->
-
-<!--<p>Ако се справите бързо и успешно със задачата &ndash; имате възможност за допълнителни бонус-->
-<!--точки &ndash; интруктура ще обясни как да ги спечелите.</p>-->
-
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div>-->
-<!--<p><strong>Реда, по който вие трябва да преминете полигоните е:</strong></p>-->
-<!--<ul>-->
-<!--<li>Полигон 3</li>-->
-<!--<li>Полигон 2</li>-->
-<!--<li>Полигон 1</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div data-role="footer" data-position="fixed" data-theme="b">-->
-<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-<!--</div>-->
-<!--<!-- /footer -->-->
-<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-required">-->
-<!--<ul data-role="listview">-->
-<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-<!--<li><a href="#page-required" data-transition="none"-->
-<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Задължителни елементи</a></li>-->
-<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--<!-- /panel -->-->
-<!--</div>-->
-<!--<!-- /page -->-->
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
+    </div>
+    <!-- /footer -->
+    <div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-required">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>
+            <li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>
+            <li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>
+            <li><a href="#page-score" data-transition="none">Точкова система</a></li>
+            <li><a href="#page-required" data-transition="none"
+                   class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Задължителни елементи</a></li>
+            <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
+            <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
+            <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+</div>
+<!-- /page -->
 
 <!--<div data-role="page" id="page-free">-->
 <!--<div data-role="header" data-theme="b" data-position="fixed">-->

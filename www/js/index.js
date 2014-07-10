@@ -29,13 +29,13 @@ function gotFileEntry(fileEntry) {
     fileEntry.file(gotFile, fail);
 }
 
-function gotFile(file){
+function gotFile(file) {
     readAsText(file);
 }
 
 function readAsText(file) {
     var reader = new FileReader();
-    reader.onloadend = function(evt) {
+    reader.onloadend = function (evt) {
         createJson(evt.target.result);
     };
     reader.readAsText(file);
@@ -51,4 +51,31 @@ function createJson(text) {
     $('.homePageText').text(json.message);
     $('.score-wrap').html(json.scores);
     $('.info-wrap').html(json.instructions);
+
+    var required = json.required;
+
+    var html = ''
+
+    var count = 1;
+    $.each(required, function (item) {
+        html += '<div data-role="collapsible">';
+        html += '<h3 style="position:relative">';
+        html += item.title;
+        html += '</h3>';
+        html += '<form style="position: absolute;right: 10px;top: -9px;width: 400px;">';
+        html += '<div class="ui-field-contain">';
+        html += '<label for="slider-' + count + '" style="margin-right:-25px;">Точки:</label>';
+        html += '<input name="slider-' + count + '" id="slider-' + count + '" data-mini="true" min="0" max="100" value="0" type="range">';
+        html += '</div>';
+        html += '</form>';
+        html += '</h3>';
+        html += '<div>';
+        html += item.description;
+        html += '</div>';
+        html += '</div>';
+
+        count++;
+    })
+
+    $('.required-wrap').html(html);
 }
