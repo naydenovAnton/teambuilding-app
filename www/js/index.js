@@ -49,5 +49,5 @@ function createJson(text) {
     var json = JSON.parse(text);
 
     $('.homePageText').text(json.message);
-    alert(json.message);
+    $('.score-wrap').text(json.scores);
 }

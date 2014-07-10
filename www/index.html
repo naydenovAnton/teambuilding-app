@@ -18,7 +18,9 @@
     </div>
     <!-- /header -->
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
-        123 - <h3 class="homePageText"></h3>
+        <div style="text-align: center;">
+            <h2 class="homePageText"></h2>
+        </div>
     </div>
     <!-- /content -->
     <div data-role="footer" data-position="fixed" data-theme="b">
@@ -40,85 +42,60 @@
     </div>
     <!--&lt;!&ndash; /panel &ndash;&gt;-->
     <!--<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a"-->
-         <!--id="add-form">-->
-        <!--<form class="userform">-->
-            <!--<h2>Регистация на отбор</h2>-->
-            <!--<label for="name">Име:</label>-->
-            <!--<input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">-->
+    <!--id="add-form">-->
+    <!--<form class="userform">-->
+    <!--<h2>Регистация на отбор</h2>-->
+    <!--<label for="name">Име:</label>-->
+    <!--<input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">-->
 
-            <!--<div class="ui-grid-a">-->
-                <!--<div class="ui-block-a"><a href="#" data-rel="close"-->
-                                           <!--class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Запиши</a></div>-->
-            <!--</div>-->
-        <!--</form>-->
+    <!--<div class="ui-grid-a">-->
+    <!--<div class="ui-block-a"><a href="#" data-rel="close"-->
+    <!--class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Запиши</a></div>-->
+    <!--</div>-->
+    <!--</form>-->
     <!--</div>-->
     <!-- /panel -->
 </div>
 <!-- /page -->
 
-<!--<div data-role="page" id="page-score">-->
-<!--<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">-->
-<!--<h1>Точкова система</h1>-->
-<!--<a href="#nav-panel-score" data-icon="bars" data-iconpos="">Меню</a>-->
-<!--</div>-->
-<!--&lt;!&ndash; /header &ndash;&gt;-->
-<!--<div role="main" class="ui-content jqm-content">-->
-<!--<p><strong>ЗАДЪЛЖИТЕЛНИ ЕЛЕМЕНТИ:</strong></p>-->
-<!--<ul>-->
-<!--<li>50 ТОЧКИ/ИЗПЪЛНЕНИЕ/</li>-->
-<!--<li>-50 ТОЧКИ/ПРИ НЕИЗПЪЛНЕНИЕ/</li>-->
-<!--</ul>-->
-<!--<p><strong>ИЗБИРАЕМИ:</strong></p>-->
-<!--<ul>-->
-<!--<li>ВЪПРОСИ &ndash; 10 ТОЧКИ/ВЪПРОС</li>-->
-<!--<li>ЗАДАЧИ &ndash; 20 ТОЧКИ/ЗАДАЧА</li>-->
-<!--<li>СНИМКИ НА ОБЕКТИТЕ И ОТБОРА С ТЯХ &ndash; 40 ТОЧКИ/ОБЕКТ</li>-->
-<!--</ul>-->
-<!--<p><strong>Уточнения:</strong></p>-->
-
-<!--<p>-->
-<!--Всички екипи, трябва да са завършили до 16.00 часа. Всеки отбор, който не е предал папката до 16.00 часа,-->
-<!--губи по 1 точка на минута!-->
-<!--</p>-->
-
-<!--<p><br/>-->
-<!--Ролите в екипа трябва да се спазват, отговорите на въпросите, трябва да бъдат записани на листа в папката,-->
-<!--името на отбора да е записано в началото на папката и картата да е приложена при предаването на папката в-->
-<!--хотелa.</p>-->
-
-<!--<p><br/>-->
-<!--Освен трите задължителни елемента, не е задължително да се справите с всички задачи &ndash; целта ви е-->
-<!--максимален брой точки &ndash; помислете за стратегията си!</p>-->
-<!--</div>-->
-<!--&lt;!&ndash; /content &ndash;&gt;-->
-<!--<div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">-->
-<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-<!--</div>-->
-<!--&lt;!&ndash; /footer &ndash;&gt;-->
-<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-score">-->
-<!--<ul data-role="listview">-->
-<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-<!--<li><a href="#page-score" data-transition="none"-->
-<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Точкова система</a></li>-->
-<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--&lt;!&ndash; /panel &ndash;&gt;-->
-<!--</div>-->
-<!--&lt;!&ndash; /page &ndash;&gt;-->
+<div data-role="page" class="jqm-demos" id="score-page" data-title="GfK Teambuilding">
+    <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+        <h1>Точкова система</h1>
+        <a href="#nav-panel-score" data-icon="bars" data-iconpos="">Меню</a>
+    </div>
+    <!-- /header -->
+    <div role="main" class="ui-content jqm-content">
+        <div class="score-wrap" ></div>
+    </div>
+    <!-- /content -->
+    <div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">
+        <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
+    </div>
+    <!-- /footer -->
+    <div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="score-page-nav">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>
+            <li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>
+            <li><a href="#page-video" data-transition="none">Видео представяне</a></li>
+            <li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>
+            <li><a href="#page-score" data-transition="none"
+                   class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Точкова система</a></li>
+            <li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>
+            <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
+            <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
+            <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+</div>
+<!-- /page -->
 
 <!--<div data-role="page" id="page-video">-->
 <!--<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">-->
 <!--<h1>Видео представяне</h1>-->
 <!--<a href="#nav-panel-video" data-icon="bars" data-iconpos="">Меню</a>-->
 <!--</div>-->
-<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<!-- /header -->-->
 <!--<div role="main" class="ui-content jqm-content" style="padding:0;">-->
 <!--<video id="myvideo" width="964" height="466" autoplay controls preload="auto"-->
 <!--poster="http://h-vision.com/blog/wp-content/uploads/2013/12/capture_001_18122013_121320-blog.jpg">-->
@@ -130,7 +107,7 @@
 <!--<div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">-->
 <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
 <!--</div>-->
-<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<!-- /footer -->-->
 <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-video">-->
 <!--<ul data-role="listview">-->
 <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
@@ -145,16 +122,16 @@
 <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
 <!--</ul>-->
 <!--</div>-->
-<!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<!-- /panel -->-->
 <!--</div>-->
-<!--&lt;!&ndash; /page &ndash;&gt;-->
+<!--<!-- /page -->-->
 
 <!--<div data-role="page" id="page-welcome-text">-->
 <!--<div data-role="header" data-theme="b" data-position="fixed">-->
 <!--<h1>Текстово представяне</h1>-->
 <!--<a href="#nav-panel-welcome-text" data-icon="bars" data-iconpos="">Меню</a>-->
 <!--</div>-->
-<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<!-- /header -->-->
 <!--<div role="main" class="ui-content jqm-content">-->
 <!--<h2><strong>Е, приключенци...</strong></h2>-->
 
@@ -211,7 +188,7 @@
 <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
 <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
 <!--</div>-->
-<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<!-- /footer -->-->
 <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-welcome-text">-->
 <!--<ul data-role="listview">-->
 <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
@@ -226,16 +203,16 @@
 <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
 <!--</ul>-->
 <!--</div>-->
-<!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<!-- /panel -->-->
 <!--</div>-->
-<!--&lt;!&ndash; /page &ndash;&gt;-->
+<!--<!-- /page -->-->
 
 <!--<div data-role="page" id="page-required">-->
 <!--<div data-role="header" data-theme="b" data-position="fixed">-->
 <!--<h1>Задължителни елементи</h1>-->
 <!--<a href="#nav-panel-required" data-icon="bars" data-iconpos="">Меню</a>-->
 <!--</div>-->
-<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<!-- /header -->-->
 <!--<div role="main" class="ui-content jqm-content">-->
 <!--<div data-role="collapsible-set" data-theme="b">-->
 <!--<div data-role="collapsible">-->
@@ -350,7 +327,7 @@
 <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
 <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
 <!--</div>-->
-<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<!-- /footer -->-->
 <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-required">-->
 <!--<ul data-role="listview">-->
 <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
@@ -365,16 +342,16 @@
 <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
 <!--</ul>-->
 <!--</div>-->
-<!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<!-- /panel -->-->
 <!--</div>-->
-<!--&lt;!&ndash; /page &ndash;&gt;-->
+<!--<!-- /page -->-->
 
 <!--<div data-role="page" id="page-free">-->
 <!--<div data-role="header" data-theme="b" data-position="fixed">-->
 <!--<h1>Избираеми задачи</h1>-->
 <!--<a href="#nav-panel-free" data-icon="bars" data-iconpos="">Меню</a>-->
 <!--</div>-->
-<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<!-- /header -->-->
 <!--<div role="main" class="ui-content jqm-content">-->
 <!--<table data-role="table" id="table-column-toggle" data-mode=""-->
 <!--class="ui-body-d ui-shadow table-stripe ui-responsive">-->
@@ -464,7 +441,7 @@
 <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
 <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
 <!--</div>-->
-<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<!-- /footer -->-->
 <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-free">-->
 <!--<ul data-role="listview">-->
 <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
@@ -479,16 +456,16 @@
 <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
 <!--</ul>-->
 <!--</div>-->
-<!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<!-- /panel -->-->
 <!--</div>-->
-<!--&lt;!&ndash; /page &ndash;&gt;-->
+<!--<!-- /page -->-->
 
 <!--<div data-role="page" id="page-questions">-->
 <!--<div data-role="header" data-theme="b" data-position="fixed">-->
 <!--<h1>Въпроси</h1>-->
 <!--<a href="#nav-panel-questions" data-icon="bars" data-iconpos="">Меню</a>-->
 <!--</div>-->
-<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<!-- /header -->-->
 <!--<div role="main" class="ui-content jqm-content">-->
 <!--<table data-role="table" id="table-column-toggle" data-mode=""-->
 <!--class="ui-body-d ui-shadow table-stripe ui-responsive">-->
@@ -577,7 +554,7 @@
 <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
 <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
 <!--</div>-->
-<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<!-- /footer -->-->
 <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-questions">-->
 <!--<ul data-role="listview">-->
 <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
@@ -592,16 +569,16 @@
 <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
 <!--</ul>-->
 <!--</div>-->
-<!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<!-- /panel -->-->
 <!--</div>-->
-<!--&lt;!&ndash; /page &ndash;&gt;-->
+<!--<!-- /page -->-->
 
 <!--<div data-role="page" id="page-objecs">-->
 <!--<div data-role="header" data-theme="b" data-position="fixed">-->
 <!--<h1>Обекти</h1>-->
 <!--<a href="#nav-panel-objecs" data-icon="bars" data-iconpos="">Меню</a>-->
 <!--</div>-->
-<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<!-- /header -->-->
 <!--<div role="main" class="ui-content jqm-content">-->
 <!--<div class="ui-grid-c">-->
 <!--<div class="ui-block-a">-->
@@ -645,12 +622,12 @@
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
-<!--&lt;!&ndash; /grid-c &ndash;&gt;-->
+<!--<!-- /grid-c -->-->
 <!--</div>-->
 <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
 <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
 <!--</div>-->
-<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<!-- /footer -->-->
 <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-objecs">-->
 <!--<ul data-role="listview">-->
 <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
@@ -665,9 +642,9 @@
 <!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Обекти</a></li>-->
 <!--</ul>-->
 <!--</div>-->
-<!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<!-- /panel -->-->
 <!--</div>-->
-<!--&lt;!&ndash; /page &ndash;&gt;-->
+<!--<!-- /page -->-->
 
 <script type="text/javascript" src="phonegap.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
