@@ -12,6 +12,35 @@ var app = {
         app.receivedEvent('deviceready');
     },
     receivedEvent: function (id) {
-        alert('da');
+        loadFile();
     }
 };
+
+function loadFile() {
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+}
+
+function gotFS(fileSystem) {
+    fileSystem.root.getFile("/sdcard/scavenger/data/config.txt", null, gotFileEntry, fail);
+}
+
+function gotFileEntry(fileEntry) {
+    fileEntry.file(gotFile, fail);
+}
+
+function gotFile(file){
+    readAsText(file);
+}
+
+function readAsText(file) {
+    var reader = new FileReader();
+    reader.onloadend = function(evt) {
+        console.log("Read as text");
+        console.log(evt.target.result);
+    };
+    reader.readAsText(file);
+}
+
+function fail(evt) {
+    console.log(evt.target.error.code);
+}
