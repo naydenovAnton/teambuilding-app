@@ -18,36 +18,37 @@ var app = {
 };
 
 function loadFile() {
-    alert('1');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 }
 
 function gotFS(fileSystem) {
-    alert('2');
     fileSystem.root.getFile("/sdcard/scavenger/data/config.txt", null, gotFileEntry, fail);
 }
 
 function gotFileEntry(fileEntry) {
-    alert('3');
     fileEntry.file(gotFile, fail);
 }
 
 function gotFile(file){
-    alert('4');
     readAsText(file);
 }
 
 function readAsText(file) {
-    alert('5');
     var reader = new FileReader();
     reader.onloadend = function(evt) {
-        alert("Read as text");
-        alert(evt.target.result);
+        createJson(evt.target.result);
     };
     reader.readAsText(file);
 }
 
 function fail(evt) {
-    alert('6');
     alert(evt.target.error.code);
+}
+
+function createJson(text) {
+    var json = JSON.parse(text);
+
+    console.log(json);
+    alert(json.id);
+
 }
