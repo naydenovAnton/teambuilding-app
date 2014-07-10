@@ -49,4 +49,5 @@ function createJson(text) {
     var json = JSON.parse(text);
 
     $('.homePageText').html(json.message);
+    console.log(json);
 }
