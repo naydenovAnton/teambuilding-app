@@ -4,14 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
     <title>H-vision</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
-
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.0.min.js"></script>
 </head>
 <body>
 <div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="GfK Teambuilding">
@@ -61,615 +57,615 @@
 <!-- /page -->
 
 <!--<div data-role="page" id="page-score">-->
-    <!--<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">-->
-        <!--<h1>Точкова система</h1>-->
-        <!--<a href="#nav-panel-score" data-icon="bars" data-iconpos="">Меню</a>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /header &ndash;&gt;-->
-    <!--<div role="main" class="ui-content jqm-content">-->
-        <!--<p><strong>ЗАДЪЛЖИТЕЛНИ ЕЛЕМЕНТИ:</strong></p>-->
-        <!--<ul>-->
-            <!--<li>50 ТОЧКИ/ИЗПЪЛНЕНИЕ/</li>-->
-            <!--<li>-50 ТОЧКИ/ПРИ НЕИЗПЪЛНЕНИЕ/</li>-->
-        <!--</ul>-->
-        <!--<p><strong>ИЗБИРАЕМИ:</strong></p>-->
-        <!--<ul>-->
-            <!--<li>ВЪПРОСИ &ndash; 10 ТОЧКИ/ВЪПРОС</li>-->
-            <!--<li>ЗАДАЧИ &ndash; 20 ТОЧКИ/ЗАДАЧА</li>-->
-            <!--<li>СНИМКИ НА ОБЕКТИТЕ И ОТБОРА С ТЯХ &ndash; 40 ТОЧКИ/ОБЕКТ</li>-->
-        <!--</ul>-->
-        <!--<p><strong>Уточнения:</strong></p>-->
+<!--<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">-->
+<!--<h1>Точкова система</h1>-->
+<!--<a href="#nav-panel-score" data-icon="bars" data-iconpos="">Меню</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<div role="main" class="ui-content jqm-content">-->
+<!--<p><strong>ЗАДЪЛЖИТЕЛНИ ЕЛЕМЕНТИ:</strong></p>-->
+<!--<ul>-->
+<!--<li>50 ТОЧКИ/ИЗПЪЛНЕНИЕ/</li>-->
+<!--<li>-50 ТОЧКИ/ПРИ НЕИЗПЪЛНЕНИЕ/</li>-->
+<!--</ul>-->
+<!--<p><strong>ИЗБИРАЕМИ:</strong></p>-->
+<!--<ul>-->
+<!--<li>ВЪПРОСИ &ndash; 10 ТОЧКИ/ВЪПРОС</li>-->
+<!--<li>ЗАДАЧИ &ndash; 20 ТОЧКИ/ЗАДАЧА</li>-->
+<!--<li>СНИМКИ НА ОБЕКТИТЕ И ОТБОРА С ТЯХ &ndash; 40 ТОЧКИ/ОБЕКТ</li>-->
+<!--</ul>-->
+<!--<p><strong>Уточнения:</strong></p>-->
 
-        <!--<p>-->
-            <!--Всички екипи, трябва да са завършили до 16.00 часа. Всеки отбор, който не е предал папката до 16.00 часа,-->
-            <!--губи по 1 точка на минута!-->
-        <!--</p>-->
+<!--<p>-->
+<!--Всички екипи, трябва да са завършили до 16.00 часа. Всеки отбор, който не е предал папката до 16.00 часа,-->
+<!--губи по 1 точка на минута!-->
+<!--</p>-->
 
-        <!--<p><br/>-->
-            <!--Ролите в екипа трябва да се спазват, отговорите на въпросите, трябва да бъдат записани на листа в папката,-->
-            <!--името на отбора да е записано в началото на папката и картата да е приложена при предаването на папката в-->
-            <!--хотелa.</p>-->
+<!--<p><br/>-->
+<!--Ролите в екипа трябва да се спазват, отговорите на въпросите, трябва да бъдат записани на листа в папката,-->
+<!--името на отбора да е записано в началото на папката и картата да е приложена при предаването на папката в-->
+<!--хотелa.</p>-->
 
-        <!--<p><br/>-->
-            <!--Освен трите задължителни елемента, не е задължително да се справите с всички задачи &ndash; целта ви е-->
-            <!--максимален брой точки &ndash; помислете за стратегията си!</p>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /content &ndash;&gt;-->
-    <!--<div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">-->
-        <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /footer &ndash;&gt;-->
-    <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-score">-->
-        <!--<ul data-role="listview">-->
-            <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-            <!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-            <!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-            <!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-            <!--<li><a href="#page-score" data-transition="none"-->
-                   <!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Точкова система</a></li>-->
-            <!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-            <!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-            <!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-            <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<p><br/>-->
+<!--Освен трите задължителни елемента, не е задължително да се справите с всички задачи &ndash; целта ви е-->
+<!--максимален брой точки &ndash; помислете за стратегията си!</p>-->
+<!--</div>-->
+<!--&lt;!&ndash; /content &ndash;&gt;-->
+<!--<div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">-->
+<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-score">-->
+<!--<ul data-role="listview">-->
+<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
+<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
+<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
+<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
+<!--<li><a href="#page-score" data-transition="none"-->
+<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Точкова система</a></li>-->
+<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
+<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
+<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
+<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /panel &ndash;&gt;-->
 <!--</div>-->
 <!--&lt;!&ndash; /page &ndash;&gt;-->
 
 <!--<div data-role="page" id="page-video">-->
-    <!--<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">-->
-        <!--<h1>Видео представяне</h1>-->
-        <!--<a href="#nav-panel-video" data-icon="bars" data-iconpos="">Меню</a>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /header &ndash;&gt;-->
-    <!--<div role="main" class="ui-content jqm-content" style="padding:0;">-->
-        <!--<video id="myvideo" width="964" height="466" autoplay controls preload="auto"-->
-               <!--poster="http://h-vision.com/blog/wp-content/uploads/2013/12/capture_001_18122013_121320-blog.jpg">-->
-            <!--<source src="http://v.jwpcdn.com/zWLy8Jer/videos/NnkfCwbn-364766.mp4?77c801d752d5207784c49e7ed90fb953e1699ddad62cf6416fa6459a7e2e98a1f69289e447ac085647ae27365998b35d0d2d5393514c896cb47c70635cb280b5d558e176ed4b6d3b8b5d3c4a33bb2b1a28ce22b7"-->
-                    <!--type="video/mp4">-->
-            <!--Your browser does not support the video tag.-->
-        <!--</video>-->
-    <!--</div>-->
-    <!--<div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">-->
-        <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /footer &ndash;&gt;-->
-    <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-video">-->
-        <!--<ul data-role="listview">-->
-            <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-            <!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-            <!--<li><a href="#page-video" data-transition="none"-->
-                   <!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Видео представяне</a></li>-->
-            <!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-            <!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-            <!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-            <!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-            <!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-            <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">-->
+<!--<h1>Видео представяне</h1>-->
+<!--<a href="#nav-panel-video" data-icon="bars" data-iconpos="">Меню</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<div role="main" class="ui-content jqm-content" style="padding:0;">-->
+<!--<video id="myvideo" width="964" height="466" autoplay controls preload="auto"-->
+<!--poster="http://h-vision.com/blog/wp-content/uploads/2013/12/capture_001_18122013_121320-blog.jpg">-->
+<!--<source src="http://v.jwpcdn.com/zWLy8Jer/videos/NnkfCwbn-364766.mp4?77c801d752d5207784c49e7ed90fb953e1699ddad62cf6416fa6459a7e2e98a1f69289e447ac085647ae27365998b35d0d2d5393514c896cb47c70635cb280b5d558e176ed4b6d3b8b5d3c4a33bb2b1a28ce22b7"-->
+<!--type="video/mp4">-->
+<!--Your browser does not support the video tag.-->
+<!--</video>-->
+<!--</div>-->
+<!--<div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">-->
+<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-video">-->
+<!--<ul data-role="listview">-->
+<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
+<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
+<!--<li><a href="#page-video" data-transition="none"-->
+<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Видео представяне</a></li>-->
+<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
+<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
+<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
+<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
+<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
+<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /panel &ndash;&gt;-->
 <!--</div>-->
 <!--&lt;!&ndash; /page &ndash;&gt;-->
 
 <!--<div data-role="page" id="page-welcome-text">-->
-    <!--<div data-role="header" data-theme="b" data-position="fixed">-->
-        <!--<h1>Текстово представяне</h1>-->
-        <!--<a href="#nav-panel-welcome-text" data-icon="bars" data-iconpos="">Меню</a>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /header &ndash;&gt;-->
-    <!--<div role="main" class="ui-content jqm-content">-->
-        <!--<h2><strong>Е, приключенци...</strong></h2>-->
+<!--<div data-role="header" data-theme="b" data-position="fixed">-->
+<!--<h1>Текстово представяне</h1>-->
+<!--<a href="#nav-panel-welcome-text" data-icon="bars" data-iconpos="">Меню</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<div role="main" class="ui-content jqm-content">-->
+<!--<h2><strong>Е, приключенци...</strong></h2>-->
 
-        <!--<p>Стигнахте до тук, и от тук започва вашата експедиция...</p>-->
+<!--<p>Стигнахте до тук, и от тук започва вашата експедиция...</p>-->
 
-        <!--<p>Имате цел?</p>-->
+<!--<p>Имате цел?</p>-->
 
-        <!--<p>Имате име и идентичност на отбора?</p>-->
+<!--<p>Имате име и идентичност на отбора?</p>-->
 
-        <!--<p>Имате роли в екипа?</p>-->
+<!--<p>Имате роли в екипа?</p>-->
 
-        <!--<p>Какво ви е нужно още?</p>-->
+<!--<p>Какво ви е нужно още?</p>-->
 
-        <!--<p>&nbsp;</p>-->
+<!--<p>&nbsp;</p>-->
 
-        <!--<h2><strong>Всичко е тук, в тази кутия.</strong></h2>-->
+<!--<h2><strong>Всичко е тук, в тази кутия.</strong></h2>-->
 
-        <!--<p>Имате задължителни елементи, които трябва да направите и много избираеми:</p>-->
+<!--<p>Имате задължителни елементи, които трябва да направите и много избираеми:</p>-->
 
-        <!--<p>Ще откриете <strong>задачи</strong>, между които да изберете кои да изпълните...</p>-->
+<!--<p>Ще откриете <strong>задачи</strong>, между които да изберете кои да изпълните...</p>-->
 
-        <!--<p>Тук са <strong>въпросите</strong>, на които трябва да намерите и запишете отговора...</p>-->
+<!--<p>Тук са <strong>въпросите</strong>, на които трябва да намерите и запишете отговора...</p>-->
 
-        <!--<p>Тук са <strong>обектите</strong> &ndash; скици, снимки и части от снимки, които са намерени и които вашият-->
-            <!--екип трябва да открие и да документира по време на експедицията...</p>-->
+<!--<p>Тук са <strong>обектите</strong> &ndash; скици, снимки и части от снимки, които са намерени и които вашият-->
+<!--екип трябва да открие и да документира по време на експедицията...</p>-->
 
-        <!--<p>Тук са и <strong>точките</strong>, които всяко успешно изпълнение ще ви донесе.</p>-->
+<!--<p>Тук са и <strong>точките</strong>, които всяко успешно изпълнение ще ви донесе.</p>-->
 
-        <!--<p>&nbsp;</p>-->
+<!--<p>&nbsp;</p>-->
 
-        <!--<h2><strong>Вашата задача е:</strong></h2>-->
+<!--<h2><strong>Вашата задача е:</strong></h2>-->
 
-        <!--<p>Намерете обектите и съберете всякакъв вид информация, която смятате, че ще ви бъде от полза. За-->
-            <!--доказателство, че сте били там, е необходима <strong>снимка</strong>, от която да личи, че сте целият екип-->
-            <!--при обекта. Направете <strong>карта</strong> на вашата експедиция, като отбелязвате местата на обектите,-->
-            <!--които сте открили и сте документирали.</p>-->
+<!--<p>Намерете обектите и съберете всякакъв вид информация, която смятате, че ще ви бъде от полза. За-->
+<!--доказателство, че сте били там, е необходима <strong>снимка</strong>, от която да личи, че сте целият екип-->
+<!--при обекта. Направете <strong>карта</strong> на вашата експедиция, като отбелязвате местата на обектите,-->
+<!--които сте открили и сте документирали.</p>-->
 
-        <!--<p>Решете <strong>кога, колко и кои</strong> от задачите ще изпълните, така че да съберете максималния сбор-->
-            <!--точки и да сте в хотела <strong>НАВРЕМЕ!</strong></p>-->
+<!--<p>Решете <strong>кога, колко и кои</strong> от задачите ще изпълните, така че да съберете максималния сбор-->
+<!--точки и да сте в хотела <strong>НАВРЕМЕ!</strong></p>-->
 
-        <!--<p>И не забравяйте &ndash; важно е да участвате всички &ndash; не допускайте някой да губи интерес и-->
-            <!--желание...Вие се състезавате с другите отбори!</p>-->
+<!--<p>И не забравяйте &ndash; важно е да участвате всички &ndash; не допускайте някой да губи интерес и-->
+<!--желание...Вие се състезавате с другите отбори!</p>-->
 
-        <!--<p>Най-късно до <strong>16.00</strong> трябва да влезете в хотел св. Иван Рилски и да предадете папката, с-->
-            <!--описаните вътре отговори на въпросите и картата с номерата на обектите. Ще имате малко време, през което ще-->
-            <!--можете да систематизирате снимковия материал, така че да го приложите като доказателство.</p>-->
+<!--<p>Най-късно до <strong>16.00</strong> трябва да влезете в хотел св. Иван Рилски и да предадете папката, с-->
+<!--описаните вътре отговори на въпросите и картата с номерата на обектите. Ще имате малко време, през което ще-->
+<!--можете да систематизирате снимковия материал, така че да го приложите като доказателство.</p>-->
 
-        <!--<p><strong>Следете за определените роли в екипа и ги спазвайте</strong>.</p>-->
+<!--<p><strong>Следете за определените роли в екипа и ги спазвайте</strong>.</p>-->
 
-        <!--<p>&nbsp;</p>-->
+<!--<p>&nbsp;</p>-->
 
-        <!--<h2><strong>УСПЕХ!</strong></h2>-->
-    <!--</div>-->
-    <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
-        <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /footer &ndash;&gt;-->
-    <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-welcome-text">-->
-        <!--<ul data-role="listview">-->
-            <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-            <!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-            <!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-            <!--<li><a href="#page-welcome-text" data-transition="none"-->
-                   <!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Текстово представяне</a></li>-->
-            <!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-            <!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-            <!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-            <!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-            <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<h2><strong>УСПЕХ!</strong></h2>-->
+<!--</div>-->
+<!--<div data-role="footer" data-position="fixed" data-theme="b">-->
+<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-welcome-text">-->
+<!--<ul data-role="listview">-->
+<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
+<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
+<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
+<!--<li><a href="#page-welcome-text" data-transition="none"-->
+<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Текстово представяне</a></li>-->
+<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
+<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
+<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
+<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
+<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /panel &ndash;&gt;-->
 <!--</div>-->
 <!--&lt;!&ndash; /page &ndash;&gt;-->
 
 <!--<div data-role="page" id="page-required">-->
-    <!--<div data-role="header" data-theme="b" data-position="fixed">-->
-        <!--<h1>Задължителни елементи</h1>-->
-        <!--<a href="#nav-panel-required" data-icon="bars" data-iconpos="">Меню</a>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /header &ndash;&gt;-->
-    <!--<div role="main" class="ui-content jqm-content">-->
-        <!--<div data-role="collapsible-set" data-theme="b">-->
-            <!--<div data-role="collapsible">-->
-                <!--<h3 style="position:relative">Полигон 1-->
-                    <!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
-                        <!--<div class="ui-field-contain">-->
-                            <!--<label for="slider-1" style="margin-right:-25px;">Точки:</label>-->
-                            <!--<input name="slider-1" id="slider-1" data-mini="true" min="0" max="100" value="0"-->
-                                   <!--type="range">-->
-                        <!--</div>-->
-                    <!--</form>-->
-                <!--</h3>-->
-                <!--<div>-->
-                    <!--<p>-->
-                        <!--Нощите в Банско са ясни, изпълнени със звезди, но и много хладни. Ледени ветрове се спускат по-->
-                        <!--стръмните-->
-                        <!--планински склонове след залез слънце. За да оцелеете през хладните нощи, е важно доверието и-->
-                        <!--добрата-->
-                        <!--комуникация между вас.-->
-                    <!--</p>-->
+<!--<div data-role="header" data-theme="b" data-position="fixed">-->
+<!--<h1>Задължителни елементи</h1>-->
+<!--<a href="#nav-panel-required" data-icon="bars" data-iconpos="">Меню</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<div role="main" class="ui-content jqm-content">-->
+<!--<div data-role="collapsible-set" data-theme="b">-->
+<!--<div data-role="collapsible">-->
+<!--<h3 style="position:relative">Полигон 1-->
+<!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
+<!--<div class="ui-field-contain">-->
+<!--<label for="slider-1" style="margin-right:-25px;">Точки:</label>-->
+<!--<input name="slider-1" id="slider-1" data-mini="true" min="0" max="100" value="0"-->
+<!--type="range">-->
+<!--</div>-->
+<!--</form>-->
+<!--</h3>-->
+<!--<div>-->
+<!--<p>-->
+<!--Нощите в Банско са ясни, изпълнени със звезди, но и много хладни. Ледени ветрове се спускат по-->
+<!--стръмните-->
+<!--планински склонове след залез слънце. За да оцелеете през хладните нощи, е важно доверието и-->
+<!--добрата-->
+<!--комуникация между вас.-->
+<!--</p>-->
 
-                    <!--<p>-->
-                        <!--Често единствения начин да се защитите от лошите метеорологични условия и да се сгреете е да си-->
-                        <!--направите-->
-                        <!--подслон и огнище пред него. Вашият екип е с ограничени ресурси &ndash; паднал е мрак и-->
-                        <!--разполагате само с-->
-                        <!--двама виждащи човека. Виждащите &ndash; нямат право да пипат. Всички останали могат да пипат, но-->
-                        <!--не виждат.-->
-                    <!--</p>-->
+<!--<p>-->
+<!--Често единствения начин да се защитите от лошите метеорологични условия и да се сгреете е да си-->
+<!--направите-->
+<!--подслон и огнище пред него. Вашият екип е с ограничени ресурси &ndash; паднал е мрак и-->
+<!--разполагате само с-->
+<!--двама виждащи човека. Виждащите &ndash; нямат право да пипат. Всички останали могат да пипат, но-->
+<!--не виждат.-->
+<!--</p>-->
 
-                    <!--<p>-->
-                        <!--Вашата цел е да сглобите палатка, така че колкото може повече хора от групата да могат да влязат-->
-                        <!--в нея,-->
-                        <!--без да нарушават целостта й, да затворят ципа и да стоят 1 мин. Пред палатката трябва да има-->
-                        <!--изградено-->
-                        <!--огнище.-->
-                    <!--</p>-->
+<!--<p>-->
+<!--Вашата цел е да сглобите палатка, така че колкото може повече хора от групата да могат да влязат-->
+<!--в нея,-->
+<!--без да нарушават целостта й, да затворят ципа и да стоят 1 мин. Пред палатката трябва да има-->
+<!--изградено-->
+<!--огнище.-->
+<!--</p>-->
 
-                    <!--<p>Броят хора в палатката определя и допълнителния бонус точки, които може да получи вашият екип (1-->
-                        <!--точка на човек).</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div data-role="collapsible">-->
-                <!--<h3>Полигон 2-->
-                    <!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
-                        <!--<div class="ui-field-contain">-->
-                            <!--<label for="slider-2" style="margin-right:-25px;">Точки:</label>-->
-                            <!--<input name="slider-2" id="slider-2" data-mini="true" min="0" max="100" value="0"-->
-                                   <!--type="range">-->
-                        <!--</div>-->
-                    <!--</form>-->
-                <!--</h3>-->
-                <!--<div>-->
-                    <!--<p>-->
-                        <!--Пред вашия екип има 10 плочи с издълбани древни символи, пазени в Пирин планина, заровени-->
-                        <!--дълбоко в земята.-->
-                        <!--Разполагате с 2 минути да решите кой и как да подреди плочите на определеното за това място.-->
-                        <!--След това всеки един от екипа може да отваря само по 2 плочи.-->
-                    <!--</p>-->
+<!--<p>Броят хора в палатката определя и допълнителния бонус точки, които може да получи вашият екип (1-->
+<!--точка на човек).</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div data-role="collapsible">-->
+<!--<h3>Полигон 2-->
+<!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
+<!--<div class="ui-field-contain">-->
+<!--<label for="slider-2" style="margin-right:-25px;">Точки:</label>-->
+<!--<input name="slider-2" id="slider-2" data-mini="true" min="0" max="100" value="0"-->
+<!--type="range">-->
+<!--</div>-->
+<!--</form>-->
+<!--</h3>-->
+<!--<div>-->
+<!--<p>-->
+<!--Пред вашия екип има 10 плочи с издълбани древни символи, пазени в Пирин планина, заровени-->
+<!--дълбоко в земята.-->
+<!--Разполагате с 2 минути да решите кой и как да подреди плочите на определеното за това място.-->
+<!--След това всеки един от екипа може да отваря само по 2 плочи.-->
+<!--</p>-->
 
-                    <!--<p>-->
-                        <!--Ако символите на двете плочи съвпадат, ги оставя обърнати нагоре, така че да се виждат. Ако не-->
-                        <!--съвпадат,-->
-                        <!--ги връща по местата им и предава щафетата на следващия участник в екипа.-->
-                    <!--</p>-->
+<!--<p>-->
+<!--Ако символите на двете плочи съвпадат, ги оставя обърнати нагоре, така че да се виждат. Ако не-->
+<!--съвпадат,-->
+<!--ги връща по местата им и предава щафетата на следващия участник в екипа.-->
+<!--</p>-->
 
-                    <!--<p>-->
-                        <!--Дали един поглед е бил достатъчен, за да запомни човека от вашия екип подредбата на-->
-                        <!--символите &ndash;-->
-                        <!--предстои да разберем. Това е вашето предизвикателство!-->
-                    <!--</p>-->
+<!--<p>-->
+<!--Дали един поглед е бил достатъчен, за да запомни човека от вашия екип подредбата на-->
+<!--символите &ndash;-->
+<!--предстои да разберем. Това е вашето предизвикателство!-->
+<!--</p>-->
 
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div data-role="collapsible">-->
-                <!--<h3>Полигон 3-->
-                    <!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
-                        <!--<div class="ui-field-contain">-->
-                            <!--<label for="slider-3" style="margin-right:-25px;">Точки:</label>-->
-                            <!--<input name="slider-3" id="slider-3" data-mini="true" min="0" max="100" value="0"-->
-                                   <!--type="range">-->
-                        <!--</div>-->
-                    <!--</form>-->
-                <!--</h3>-->
-                <!--<div>-->
-                    <!--<p>-->
-                        <!--Според старата банска традиция за предаване на съобщение, която подсигурява безопасното и точно-->
-                        <!--преминаване на информация, целият екип се нарежда в права линия, като участниците са един до-->
-                        <!--друг. Всеки участник получава по-->
-                        <!--една част от тръба.-->
-                    <!--</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div data-role="collapsible">-->
+<!--<h3>Полигон 3-->
+<!--<form style="position: absolute;right: 10px;top: -9px;width: 400px;">-->
+<!--<div class="ui-field-contain">-->
+<!--<label for="slider-3" style="margin-right:-25px;">Точки:</label>-->
+<!--<input name="slider-3" id="slider-3" data-mini="true" min="0" max="100" value="0"-->
+<!--type="range">-->
+<!--</div>-->
+<!--</form>-->
+<!--</h3>-->
+<!--<div>-->
+<!--<p>-->
+<!--Според старата банска традиция за предаване на съобщение, която подсигурява безопасното и точно-->
+<!--преминаване на информация, целият екип се нарежда в права линия, като участниците са един до-->
+<!--друг. Всеки участник получава по-->
+<!--една част от тръба.-->
+<!--</p>-->
 
-                    <!--<p>Участниците поставят ръцете си на посочените места на тръбата, като нямат право да ги местят.-->
-                        <!--Човек от екипа на фасилитаторите пуска топче в тръбата на първия участник. Целта е топчето да-->
-                        <!--премине през тръбите на всички участници. Готови ли сте да работите заедно?</p>-->
+<!--<p>Участниците поставят ръцете си на посочените места на тръбата, като нямат право да ги местят.-->
+<!--Човек от екипа на фасилитаторите пуска топче в тръбата на първия участник. Целта е топчето да-->
+<!--премине през тръбите на всички участници. Готови ли сте да работите заедно?</p>-->
 
-                    <!--<p>Ако се справите бързо и успешно със задачата &ndash; имате възможност за допълнителни бонус-->
-                        <!--точки &ndash; интруктура ще обясни как да ги спечелите.</p>-->
+<!--<p>Ако се справите бързо и успешно със задачата &ndash; имате възможност за допълнителни бонус-->
+<!--точки &ndash; интруктура ще обясни как да ги спечелите.</p>-->
 
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div>-->
-            <!--<p><strong>Реда, по който вие трябва да преминете полигоните е:</strong></p>-->
-            <!--<ul>-->
-                <!--<li>Полигон 3</li>-->
-                <!--<li>Полигон 2</li>-->
-                <!--<li>Полигон 1</li>-->
-            <!--</ul>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
-        <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /footer &ndash;&gt;-->
-    <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-required">-->
-        <!--<ul data-role="listview">-->
-            <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-            <!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-            <!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-            <!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-            <!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-            <!--<li><a href="#page-required" data-transition="none"-->
-                   <!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Задължителни елементи</a></li>-->
-            <!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-            <!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-            <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div>-->
+<!--<p><strong>Реда, по който вие трябва да преминете полигоните е:</strong></p>-->
+<!--<ul>-->
+<!--<li>Полигон 3</li>-->
+<!--<li>Полигон 2</li>-->
+<!--<li>Полигон 1</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div data-role="footer" data-position="fixed" data-theme="b">-->
+<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-required">-->
+<!--<ul data-role="listview">-->
+<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
+<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
+<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
+<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
+<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
+<!--<li><a href="#page-required" data-transition="none"-->
+<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Задължителни елементи</a></li>-->
+<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
+<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
+<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /panel &ndash;&gt;-->
 <!--</div>-->
 <!--&lt;!&ndash; /page &ndash;&gt;-->
 
 <!--<div data-role="page" id="page-free">-->
-    <!--<div data-role="header" data-theme="b" data-position="fixed">-->
-        <!--<h1>Избираеми задачи</h1>-->
-        <!--<a href="#nav-panel-free" data-icon="bars" data-iconpos="">Меню</a>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /header &ndash;&gt;-->
-    <!--<div role="main" class="ui-content jqm-content">-->
-        <!--<table data-role="table" id="table-column-toggle" data-mode=""-->
-               <!--class="ui-body-d ui-shadow table-stripe ui-responsive">-->
-            <!--<thead>-->
-            <!--<tr>-->
-                <!--<th>№</th>-->
-                <!--<th>Задача</th>-->
-                <!--<th>Изпълнена</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody>-->
-            <!--<tr>-->
-                <!--<th>1</th>-->
-                <!--<td>Изпишете името на компанията или неин продукт с телата си. Направете снимка на целия екип с-->
-                    <!--надписа.-->
-                <!--</td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-1" id="flip-1" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
+<!--<div data-role="header" data-theme="b" data-position="fixed">-->
+<!--<h1>Избираеми задачи</h1>-->
+<!--<a href="#nav-panel-free" data-icon="bars" data-iconpos="">Меню</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<div role="main" class="ui-content jqm-content">-->
+<!--<table data-role="table" id="table-column-toggle" data-mode=""-->
+<!--class="ui-body-d ui-shadow table-stripe ui-responsive">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>№</th>-->
+<!--<th>Задача</th>-->
+<!--<th>Изпълнена</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<th>1</th>-->
+<!--<td>Изпишете името на компанията или неин продукт с телата си. Направете снимка на целия екип с-->
+<!--надписа.-->
+<!--</td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-1" id="flip-1" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
 
-            <!--<tr>-->
-                <!--<th>2</th>-->
-                <!--<td>Снимка на целия екип, като всеки изпълнява ролята, която му е отредена в началото на играта.-->
-                    <!--Постарайте се да е ясно и за останалите, които ще гледат снимката след това.-->
-                <!--</td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-2" id="flip-2" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
+<!--<tr>-->
+<!--<th>2</th>-->
+<!--<td>Снимка на целия екип, като всеки изпълнява ролята, която му е отредена в началото на играта.-->
+<!--Постарайте се да е ясно и за останалите, които ще гледат снимката след това.-->
+<!--</td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-2" id="flip-2" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
 
-            <!--<tr>-->
-                <!--<th>3</th>-->
-                <!--<td>Снимка на затворена, непрекъсната верига, образувана от целия екип + един местен жител. Веригата-->
-                    <!--трябва да е образувана в последователност крак – ръка. Един от вас може да снима.-->
-                <!--</td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
+<!--<tr>-->
+<!--<th>3</th>-->
+<!--<td>Снимка на затворена, непрекъсната верига, образувана от целия екип + един местен жител. Веригата-->
+<!--трябва да е образувана в последователност крак – ръка. Един от вас може да снима.-->
+<!--</td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
 
-            <!--<tr>-->
-                <!--<th>4</th>-->
-                <!--<td>Да спрете местен жител на града, с който да разговаряте, за да научите интересна история за региона,-->
-                    <!--която в последствие да споделите и с останалите си колеги – снимка на целия отбор с него.-->
-                <!--</td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
+<!--<tr>-->
+<!--<th>4</th>-->
+<!--<td>Да спрете местен жител на града, с който да разговаряте, за да научите интересна история за региона,-->
+<!--която в последствие да споделите и с останалите си колеги – снимка на целия отбор с него.-->
+<!--</td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
 
-            <!--<tr>-->
-                <!--<th>5</th>-->
-                <!--<td>Снимка на целия отбор с 3 различни забранителни табели.</td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
-            <!--</tbody>-->
-        <!--</table>-->
-    <!--</div>-->
-    <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
-        <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /footer &ndash;&gt;-->
-    <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-free">-->
-        <!--<ul data-role="listview">-->
-            <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-            <!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-            <!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-            <!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-            <!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-            <!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-            <!--<li><a href="#page-free" data-transition="none"-->
-                   <!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Избираеми задачи</a></li>-->
-            <!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-            <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<tr>-->
+<!--<th>5</th>-->
+<!--<td>Снимка на целия отбор с 3 различни забранителни табели.</td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--<div data-role="footer" data-position="fixed" data-theme="b">-->
+<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-free">-->
+<!--<ul data-role="listview">-->
+<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
+<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
+<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
+<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
+<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
+<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
+<!--<li><a href="#page-free" data-transition="none"-->
+<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Избираеми задачи</a></li>-->
+<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
+<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /panel &ndash;&gt;-->
 <!--</div>-->
 <!--&lt;!&ndash; /page &ndash;&gt;-->
 
 <!--<div data-role="page" id="page-questions">-->
-    <!--<div data-role="header" data-theme="b" data-position="fixed">-->
-        <!--<h1>Въпроси</h1>-->
-        <!--<a href="#nav-panel-questions" data-icon="bars" data-iconpos="">Меню</a>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /header &ndash;&gt;-->
-    <!--<div role="main" class="ui-content jqm-content">-->
-        <!--<table data-role="table" id="table-column-toggle" data-mode=""-->
-               <!--class="ui-body-d ui-shadow table-stripe ui-responsive">-->
-            <!--<thead>-->
-            <!--<tr>-->
-                <!--<th>№</th>-->
-                <!--<th>Въпрос</th>-->
-                <!--<th>Отговор</th>-->
-                <!--<th>Изпълнена</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody>-->
-            <!--<tr>-->
-                <!--<th>1</th>-->
-                <!--<td>Кои от Стоте национални туристически обекта на Българския туристически съюз се намират в Банско?-->
-                <!--</td>-->
-                <!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-1" id="flip-1" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
+<!--<div data-role="header" data-theme="b" data-position="fixed">-->
+<!--<h1>Въпроси</h1>-->
+<!--<a href="#nav-panel-questions" data-icon="bars" data-iconpos="">Меню</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<div role="main" class="ui-content jqm-content">-->
+<!--<table data-role="table" id="table-column-toggle" data-mode=""-->
+<!--class="ui-body-d ui-shadow table-stripe ui-responsive">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>№</th>-->
+<!--<th>Въпрос</th>-->
+<!--<th>Отговор</th>-->
+<!--<th>Изпълнена</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<th>1</th>-->
+<!--<td>Кои от Стоте национални туристически обекта на Българския туристически съюз се намират в Банско?-->
+<!--</td>-->
+<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-1" id="flip-1" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
 
-            <!--<tr>-->
-                <!--<th>2</th>-->
-                <!--<td>Избройте поне 3 традиционни ястия от Банско?</td>-->
-                <!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-2" id="flip-2" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
+<!--<tr>-->
+<!--<th>2</th>-->
+<!--<td>Избройте поне 3 традиционни ястия от Банско?</td>-->
+<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-2" id="flip-2" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
 
-            <!--<tr>-->
-                <!--<th>3</th>-->
-                <!--<td>Как се нарича Националния конкурс за ледени скулптури, който се провежда в Банско?</td>-->
-                <!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
+<!--<tr>-->
+<!--<th>3</th>-->
+<!--<td>Как се нарича Националния конкурс за ледени скулптури, който се провежда в Банско?</td>-->
+<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
 
-            <!--<tr>-->
-                <!--<th>4</th>-->
-                <!--<td>Избройте имената на поне 3 знаменити личности, родени в Банско.</td>-->
-                <!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
+<!--<tr>-->
+<!--<th>4</th>-->
+<!--<td>Избройте имената на поне 3 знаменити личности, родени в Банско.</td>-->
+<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
 
-            <!--<tr>-->
-                <!--<th>5</th>-->
-                <!--<td>С колко и какви ски лифтове и влекове разполага ски зона Банско?</td>-->
-                <!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-                <!--<td>-->
-                    <!--<form>-->
-                        <!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-                            <!--<option value="off">Не</option>-->
-                            <!--<option value="on">Да</option>-->
-                        <!--</select>-->
-                    <!--</form>-->
-                <!--</td>-->
-            <!--</tr>-->
-            <!--</tbody>-->
-        <!--</table>-->
-    <!--</div>-->
-    <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
-        <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /footer &ndash;&gt;-->
-    <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-questions">-->
-        <!--<ul data-role="listview">-->
-            <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-            <!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-            <!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-            <!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-            <!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-            <!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-            <!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-            <!--<li><a href="#page-questions" data-transition="none"-->
-                   <!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Въпроси</a></li>-->
-            <!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<tr>-->
+<!--<th>5</th>-->
+<!--<td>С колко и какви ски лифтове и влекове разполага ски зона Банско?</td>-->
+<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
+<!--<td>-->
+<!--<form>-->
+<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
+<!--<option value="off">Не</option>-->
+<!--<option value="on">Да</option>-->
+<!--</select>-->
+<!--</form>-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--<div data-role="footer" data-position="fixed" data-theme="b">-->
+<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-questions">-->
+<!--<ul data-role="listview">-->
+<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
+<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
+<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
+<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
+<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
+<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
+<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
+<!--<li><a href="#page-questions" data-transition="none"-->
+<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Въпроси</a></li>-->
+<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /panel &ndash;&gt;-->
 <!--</div>-->
 <!--&lt;!&ndash; /page &ndash;&gt;-->
 
 <!--<div data-role="page" id="page-objecs">-->
-    <!--<div data-role="header" data-theme="b" data-position="fixed">-->
-        <!--<h1>Обекти</h1>-->
-        <!--<a href="#nav-panel-objecs" data-icon="bars" data-iconpos="">Меню</a>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /header &ndash;&gt;-->
-    <!--<div role="main" class="ui-content jqm-content">-->
-        <!--<div class="ui-grid-c">-->
-            <!--<div class="ui-block-a">-->
-                <!--<div class="ui-bar ui-bar-a">-->
-                    <!--<img src="img/objects/1.png" width="200">-->
+<!--<div data-role="header" data-theme="b" data-position="fixed">-->
+<!--<h1>Обекти</h1>-->
+<!--<a href="#nav-panel-objecs" data-icon="bars" data-iconpos="">Меню</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /header &ndash;&gt;-->
+<!--<div role="main" class="ui-content jqm-content">-->
+<!--<div class="ui-grid-c">-->
+<!--<div class="ui-block-a">-->
+<!--<div class="ui-bar ui-bar-a">-->
+<!--<img src="img/objects/1.png" width="200">-->
 
-                    <!--<form>-->
-                        <!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
-                        <!--<label for="checkbox-mini-0">Намерено</label>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="ui-block-b">-->
-                <!--<div class="ui-bar ui-bar-a">-->
-                    <!--<img src="img/objects/2.png" width="200">-->
+<!--<form>-->
+<!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
+<!--<label for="checkbox-mini-0">Намерено</label>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="ui-block-b">-->
+<!--<div class="ui-bar ui-bar-a">-->
+<!--<img src="img/objects/2.png" width="200">-->
 
-                    <!--<form>-->
-                        <!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
-                        <!--<label for="checkbox-mini-0">Намерено</label>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="ui-block-c">-->
-                <!--<div class="ui-bar ui-bar-a">-->
-                    <!--<img src="img/objects/3.png" width="200">-->
+<!--<form>-->
+<!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
+<!--<label for="checkbox-mini-0">Намерено</label>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="ui-block-c">-->
+<!--<div class="ui-bar ui-bar-a">-->
+<!--<img src="img/objects/3.png" width="200">-->
 
-                    <!--<form>-->
-                        <!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
-                        <!--<label for="checkbox-mini-0">Намерено</label>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="ui-block-d">-->
-                <!--<div class="ui-bar ui-bar-a">-->
-                    <!--<img src="img/objects/4.png" width="200">-->
+<!--<form>-->
+<!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
+<!--<label for="checkbox-mini-0">Намерено</label>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="ui-block-d">-->
+<!--<div class="ui-bar ui-bar-a">-->
+<!--<img src="img/objects/4.png" width="200">-->
 
-                    <!--<form>-->
-                        <!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
-                        <!--<label for="checkbox-mini-0">Намерено</label>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; /grid-c &ndash;&gt;-->
-    <!--</div>-->
-    <!--<div data-role="footer" data-position="fixed" data-theme="b">-->
-        <!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /footer &ndash;&gt;-->
-    <!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-objecs">-->
-        <!--<ul data-role="listview">-->
-            <!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-            <!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-            <!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-            <!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-            <!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-            <!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-            <!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-            <!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-            <!--<li><a href="#page-objecs" data-transition="none"-->
-                   <!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Обекти</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /panel &ndash;&gt;-->
+<!--<form>-->
+<!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
+<!--<label for="checkbox-mini-0">Намерено</label>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /grid-c &ndash;&gt;-->
+<!--</div>-->
+<!--<div data-role="footer" data-position="fixed" data-theme="b">-->
+<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; /footer &ndash;&gt;-->
+<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-objecs">-->
+<!--<ul data-role="listview">-->
+<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
+<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
+<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
+<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
+<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
+<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
+<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
+<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
+<!--<li><a href="#page-objecs" data-transition="none"-->
+<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Обекти</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /panel &ndash;&gt;-->
 <!--</div>-->
 <!--&lt;!&ndash; /page &ndash;&gt;-->
 
