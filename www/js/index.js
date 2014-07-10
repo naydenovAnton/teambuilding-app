@@ -17,22 +17,27 @@ var app = {
 };
 
 function loadFile() {
+    console.log('1');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 }
 
 function gotFS(fileSystem) {
+    console.log('2');
     fileSystem.root.getFile("/sdcard/scavenger/data/config.txt", null, gotFileEntry, fail);
 }
 
 function gotFileEntry(fileEntry) {
+    console.log('3');
     fileEntry.file(gotFile, fail);
 }
 
 function gotFile(file){
+    console.log('4');
     readAsText(file);
 }
 
 function readAsText(file) {
+    console.log('5');
     var reader = new FileReader();
     reader.onloadend = function(evt) {
         console.log("Read as text");
@@ -42,5 +47,6 @@ function readAsText(file) {
 }
 
 function fail(evt) {
+    console.log('6');
     console.log(evt.target.error.code);
 }
