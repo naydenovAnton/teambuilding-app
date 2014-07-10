@@ -12,11 +12,14 @@ var app = {
         app.receivedEvent('deviceready');
     },
     receivedEvent: function (id) {
+        console.log('here');
+        alert('here');
         loadFile();
     }
 };
 
 function loadFile() {
+    alert('111');
     console.log('1');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 }
