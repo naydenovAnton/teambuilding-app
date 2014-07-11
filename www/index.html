@@ -10,9 +10,9 @@
     <script src="js/jquery.mobile-1.4.0.min.js"></script>
 </head>
 <body>
-<div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="GfK Teambuilding">
+<div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="<span class='scavenger-title'></span>">
     <div data-role="header" data-position="fixed" data-theme="b">
-        <h1>GfK Teambuilding</h1>
+        <h1><span class='scavenger-title'></span></h1>
         <a href="#nav-panel-home" data-icon="bars" data-iconpos="">Меню</a>
         <!--<a href="#add-form" data-icon="gear" data-iconpos="">Добави участници</a>-->
     </div>
@@ -88,7 +88,6 @@
     <!-- /panel -->
 </div>
 <!-- /page -->
-
 
 <div data-role="page" id="page-welcome-text" class="jqm-demos" data-title="Текстово представяне">
     <div data-role="header" data-theme="b" data-position="fixed">
@@ -234,78 +233,52 @@
 </div>
 <!-- /page -->
 
-<!--<div data-role="page" id="page-objecs">-->
-<!--<div data-role="header" data-theme="b" data-position="fixed">-->
-<!--<h1>Обекти</h1>-->
-<!--<a href="#nav-panel-objecs" data-icon="bars" data-iconpos="">Меню</a>-->
-<!--</div>-->
-<!--<!-- /header -->-->
-<!--<div role="main" class="ui-content jqm-content">-->
-<!--<div class="ui-grid-c">-->
-<!--<div class="ui-block-a">-->
-<!--<div class="ui-bar ui-bar-a">-->
-<!--<img src="img/objects/1.png" width="200">-->
-
-<!--<form>-->
-<!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
-<!--<label for="checkbox-mini-0">Намерено</label>-->
-<!--</form>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="ui-block-b">-->
-<!--<div class="ui-bar ui-bar-a">-->
-<!--<img src="img/objects/2.png" width="200">-->
-
-<!--<form>-->
-<!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
-<!--<label for="checkbox-mini-0">Намерено</label>-->
-<!--</form>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="ui-block-c">-->
-<!--<div class="ui-bar ui-bar-a">-->
-<!--<img src="img/objects/3.png" width="200">-->
-
-<!--<form>-->
-<!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
-<!--<label for="checkbox-mini-0">Намерено</label>-->
-<!--</form>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="ui-block-d">-->
-<!--<div class="ui-bar ui-bar-a">-->
-<!--<img src="img/objects/4.png" width="200">-->
-
-<!--<form>-->
-<!--<input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">-->
-<!--<label for="checkbox-mini-0">Намерено</label>-->
-<!--</form>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<!-- /grid-c -->-->
-<!--</div>-->
-<!--<div data-role="footer" data-position="fixed" data-theme="b">-->
-<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-<!--</div>-->
-<!--<!-- /footer -->-->
-<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-objecs">-->
-<!--<ul data-role="listview">-->
-<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-<!--<li><a href="#page-questions" data-transition="none">Въпроси</a></li>-->
-<!--<li><a href="#page-objecs" data-transition="none"-->
-<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Обекти</a></li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--<!-- /panel -->-->
-<!--</div>-->
-<!--<!-- /page -->-->
+<div data-role="page" id="page-objecs" class="jqm-demos" data-title="Обекти">
+    <div data-role="header" data-theme="b" data-position="fixed">
+        <h1>Обекти</h1>
+        <a href="#nav-panel-objecs" data-icon="bars" data-iconpos="">Меню</a>
+    </div>
+    <!-- /header -->
+    <div role="main" class="ui-content jqm-content">
+        <div class="ui-grid-c">
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a">
+                    <img src="img/objects/1.png" width="200">
+                    <form>
+                        <input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">
+                        <label for="checkbox-mini-0">Намерено</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <button onclick="capturePhotoWithData();">Capture Photo With Image Data</button> <br>
+        <button onclick="capturePhotoWithFile();">Capture Photo With Image File URI</button> <br>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+        <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+        <img style="display:none;" id="largeImage" src="" />
+        <!-- /grid-c -->
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
+    </div>
+    <!-- /footer -->
+    <div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-objecs">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>
+            <li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>
+            <li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>
+            <li><a href="#score-page" data-transition="none">Точкова система</a></li>
+            <li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>
+            <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
+            <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
+            <li><a href="#page-objecs" data-transition="none"
+                   class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Обекти</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+</div>
+<!-- /page -->
 
 <script type="text/javascript" src="phonegap.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
