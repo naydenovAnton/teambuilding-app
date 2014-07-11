@@ -54,13 +54,13 @@ function createJson(text) {
 
     var required = json.required;
 
-    var html = ''
+    var html = '<div data-role="collapsible-set" data-theme="b">';
 
     var count = 1;
-    $.each(required, function (item) {
+    $.each(required, function (key, value) {
         html += '<div data-role="collapsible">';
         html += '<h3 style="position:relative">';
-        html += item.title;
+        html += value.title;
         html += '</h3>';
         html += '<form style="position: absolute;right: 10px;top: -9px;width: 400px;">';
         html += '<div class="ui-field-contain">';
@@ -70,12 +70,14 @@ function createJson(text) {
         html += '</form>';
         html += '</h3>';
         html += '<div>';
-        html += item.description;
+        html += value.description;
         html += '</div>';
         html += '</div>';
 
         count++;
     })
+
+    html += '</div>';
 
     $('.required-wrap').html(html);
 }
