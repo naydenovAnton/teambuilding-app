@@ -61,7 +61,6 @@ function createJson(text) {
         html += '<div data-role="collapsible">';
         html += '<h3 style="position:relative">';
         html += value.title;
-        html += '</h3>';
         html += '<form style="position: absolute;right: 10px;top: -9px;width: 400px;">';
         html += '<div class="ui-field-contain">';
         html += '<label for="slider-' + count + '" style="margin-right:-25px;">Точки:</label>';
@@ -69,9 +68,9 @@ function createJson(text) {
         html += '</div>';
         html += '</form>';
         html += '</h3>';
-        html += '<div>';
+        html += '<div><pre>';
         html += value.description;
-        html += '</div>';
+        html += '</pre></div>';
         html += '</div>';
 
         count++;
@@ -79,5 +78,5 @@ function createJson(text) {
 
     html += '</div>';
 
-    $('.required-wrap').html(html);
+    $('.required-wrap').append(html);
 }
