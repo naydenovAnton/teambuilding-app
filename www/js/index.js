@@ -79,4 +79,28 @@ function createJson(text) {
     html += '</div>';
 
     $('.required-wrap').append(html);
+
+
+    var optional = json.optional;
+
+    var count = 1;
+    $.each(optional, function (key, value) {
+        html += '<tr>';
+        html += '<th>' + count + '</th>';
+        html += '<th>' + value.description + '</th>';
+
+        html += '<td>';
+        html += '<form>';
+        html += '<select name="flip-' + count + '" id="flip-' + count + '" data-role="flipswitch" data-theme="b" data-mini="true">';
+        html += '<option value="0">Не</option>';
+        html += '<option value="1">Да</option>';
+        html += '</select>';
+        html += '</form>';
+        html += '</td>';
+        html += '</tr>';
+
+        count++;
+    })
+
+    $('.optional-wrap').append(html);
 }
