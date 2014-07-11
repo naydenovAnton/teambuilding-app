@@ -170,6 +170,27 @@
             </tbody>
         </table>
         <input type="file" capture="camera" accept="image/*" id="takePictureField">
+        <img id="yourimage">
+        <script>
+            var desiredWidth;
+
+            $(document).ready(function() {
+                console.log('onReady');
+                $("#takePictureField").on("change",gotPic);
+                desiredWidth = window.innerWidth;
+                if(!("url" in window) && ("webkitURL" in window)) {
+                    window.URL = window.webkitURL;
+                }
+            });
+
+            //Credit: https://www.youtube.com/watch?v=EPYnGFEcis4&feature=youtube_gdata_player
+            function gotPic(event) {
+                if(event.target.files.length == 1 &&
+                        event.target.files[0].type.indexOf("image/") == 0) {
+                    $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
+                }
+            }
+        </script>
     </div>
     <div data-role="footer" data-position="fixed" data-theme="b">
         <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
