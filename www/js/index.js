@@ -105,4 +105,29 @@ function createJson(text) {
     })
 
     $('.optional-wrap').append(html);
+
+    var questions = json.questions;
+
+    var html = '';
+
+    var count = 1;
+    $.each(questions, function (key, value) {
+        html += '<tr>';
+        html += '<th>' + count + '</th>';
+        html += '<th>' + value.description + '</th>';
+        html += '<td><textarea cols="40" rows="8" name="textarea-' + count + ' id="textarea-' + count + '" data-mini="true"></textarea></td>';
+        html += '<td>';
+        html += '<form>';
+        html += '<select name="flip-q-' + count + '" id="flip-q-' + count + '" data-role="flipswitch" data-theme="b" data-mini="true">';
+        html += '<option value="0">Не</option>';
+        html += '<option value="1">Да</option>';
+        html += '</select>';
+        html += '</form>';
+        html += '</td>';
+        html += '</tr>';
+
+        count++;
+    })
+
+    $('.questions-wrap').append(html);
 }

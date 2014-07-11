@@ -156,7 +156,7 @@
     </div>
     <!-- /header -->
     <div role="main" class="ui-content jqm-content">
-        <table data-role="table" id="table-column-toggle" data-mode=""
+        <table data-role="table" id="" data-mode=""
                class="ui-body-d ui-shadow table-stripe ui-responsive">
             <thead>
             <tr>
@@ -169,28 +169,6 @@
 
             </tbody>
         </table>
-        <input type="file" capture="camera" accept="image/*" id="takePictureField">
-        <img id="yourimage">
-        <script>
-            var desiredWidth;
-
-            $(document).ready(function() {
-                console.log('onReady');
-                $("#takePictureField").on("change",gotPic);
-                desiredWidth = window.innerWidth;
-                if(!("url" in window) && ("webkitURL" in window)) {
-                    window.URL = window.webkitURL;
-                }
-            });
-
-            //Credit: https://www.youtube.com/watch?v=EPYnGFEcis4&feature=youtube_gdata_player
-            function gotPic(event) {
-                if(event.target.files.length == 1 &&
-                        event.target.files[0].type.indexOf("image/") == 0) {
-                    $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
-                }
-            }
-        </script>
     </div>
     <div data-role="footer" data-position="fixed" data-theme="b">
         <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
@@ -213,118 +191,48 @@
 </div>
 <!-- /page -->
 
-<!--<div data-role="page" id="page-questions">-->
-<!--<div data-role="header" data-theme="b" data-position="fixed">-->
-<!--<h1>Въпроси</h1>-->
-<!--<a href="#nav-panel-questions" data-icon="bars" data-iconpos="">Меню</a>-->
-<!--</div>-->
-<!--<!-- /header -->-->
-<!--<div role="main" class="ui-content jqm-content">-->
-<!--<table data-role="table" id="table-column-toggle" data-mode=""-->
-<!--class="ui-body-d ui-shadow table-stripe ui-responsive">-->
-<!--<thead>-->
-<!--<tr>-->
-<!--<th>№</th>-->
-<!--<th>Въпрос</th>-->
-<!--<th>Отговор</th>-->
-<!--<th>Изпълнена</th>-->
-<!--</tr>-->
-<!--</thead>-->
-<!--<tbody>-->
-<!--<tr>-->
-<!--<th>1</th>-->
-<!--<td>Кои от Стоте национални туристически обекта на Българския туристически съюз се намират в Банско?-->
-<!--</td>-->
-<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-<!--<td>-->
-<!--<form>-->
-<!--<select name="flip-1" id="flip-1" data-role="flipswitch" data-theme="b" data-mini="true">-->
-<!--<option value="off">Не</option>-->
-<!--<option value="on">Да</option>-->
-<!--</select>-->
-<!--</form>-->
-<!--</td>-->
-<!--</tr>-->
-
-<!--<tr>-->
-<!--<th>2</th>-->
-<!--<td>Избройте поне 3 традиционни ястия от Банско?</td>-->
-<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-<!--<td>-->
-<!--<form>-->
-<!--<select name="flip-2" id="flip-2" data-role="flipswitch" data-theme="b" data-mini="true">-->
-<!--<option value="off">Не</option>-->
-<!--<option value="on">Да</option>-->
-<!--</select>-->
-<!--</form>-->
-<!--</td>-->
-<!--</tr>-->
-
-<!--<tr>-->
-<!--<th>3</th>-->
-<!--<td>Как се нарича Националния конкурс за ледени скулптури, който се провежда в Банско?</td>-->
-<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-<!--<td>-->
-<!--<form>-->
-<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-<!--<option value="off">Не</option>-->
-<!--<option value="on">Да</option>-->
-<!--</select>-->
-<!--</form>-->
-<!--</td>-->
-<!--</tr>-->
-
-<!--<tr>-->
-<!--<th>4</th>-->
-<!--<td>Избройте имената на поне 3 знаменити личности, родени в Банско.</td>-->
-<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-<!--<td>-->
-<!--<form>-->
-<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-<!--<option value="off">Не</option>-->
-<!--<option value="on">Да</option>-->
-<!--</select>-->
-<!--</form>-->
-<!--</td>-->
-<!--</tr>-->
-
-<!--<tr>-->
-<!--<th>5</th>-->
-<!--<td>С колко и какви ски лифтове и влекове разполага ски зона Банско?</td>-->
-<!--<td><textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true"></textarea></td>-->
-<!--<td>-->
-<!--<form>-->
-<!--<select name="flip-3" id="flip-3" data-role="flipswitch" data-theme="b" data-mini="true">-->
-<!--<option value="off">Не</option>-->
-<!--<option value="on">Да</option>-->
-<!--</select>-->
-<!--</form>-->
-<!--</td>-->
-<!--</tr>-->
-<!--</tbody>-->
-<!--</table>-->
-<!--</div>-->
-<!--<div data-role="footer" data-position="fixed" data-theme="b">-->
-<!--<h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>-->
-<!--</div>-->
-<!--<!-- /footer -->-->
-<!--<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-questions">-->
-<!--<ul data-role="listview">-->
-<!--<li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>-->
-<!--<li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>-->
-<!--<li><a href="#page-video" data-transition="none">Видео представяне</a></li>-->
-<!--<li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>-->
-<!--<li><a href="#page-score" data-transition="none">Точкова система</a></li>-->
-<!--<li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>-->
-<!--<li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>-->
-<!--<li><a href="#page-questions" data-transition="none"-->
-<!--class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Въпроси</a></li>-->
-<!--<li><a href="#page-objecs" data-transition="none">Обекти</a></li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--<!-- /panel -->-->
-<!--</div>-->
-<!--<!-- /page -->-->
+<div data-role="page" id="page-questions" class="jqm-demos" data-title="Въпроси">
+    <div data-role="header" data-theme="b" data-position="fixed">
+        <h1>Въпроси</h1>
+        <a href="#nav-panel-questions" data-icon="bars" data-iconpos="">Меню</a>
+    </div>
+    <!-- /header -->
+    <div role="main" class="ui-content jqm-content">
+        <table data-role="table" data-mode=""
+               class="ui-body-d ui-shadow table-stripe ui-responsive">
+            <thead>
+            <tr>
+                <th>№</th>
+                <th>Въпрос</th>
+                <th>Отговор</th>
+                <th>Изпълнена</th>
+            </tr>
+            </thead>
+            <tbody class="questions-wrap">
+            </tbody>
+        </table>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
+    </div>
+    <!-- /footer -->
+    <div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel-questions">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>
+            <li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>
+            <li><a href="#page-video" data-transition="none">Видео представяне</a></li>
+            <li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>
+            <li><a href="#score-page" data-transition="none">Точкова система</a></li>
+            <li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>
+            <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
+            <li><a href="#page-questions" data-transition="none"
+                   class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Въпроси</a></li>
+            <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+</div>
+<!-- /page -->
 
 <!--<div data-role="page" id="page-objecs">-->
 <!--<div data-role="header" data-theme="b" data-position="fixed">-->
