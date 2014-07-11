@@ -1,6 +1,6 @@
 var pictureSource; // picture source
 var destinationType; // sets the format of returned value
-
+var selectedWrapper = 0;
 var app = {
     // Application Constructor
     initialize: function () {
@@ -69,7 +69,11 @@ function onPhotoDataSuccess(imageData) {
 //
 function onPhotoFileSuccess(imageData) {
 
-    var smallImage = document.getElementById('smallImage');
+    var element = 'smallImage_' + selectedWrapper;
+
+    alert(element);
+
+    var smallImage = document.getElementById(element);
 
 // Unhide image elements
 //
@@ -81,34 +85,10 @@ function onPhotoFileSuccess(imageData) {
     smallImage.src = imageData;
 }
 
-// Called when a photo is successfully retrieved
-//
-function onPhotoURISuccess(imageURI) {
-// Uncomment to view the image file URI
-// console.log(imageURI);
-
-// Get image handle
-//
-    var largeImage = document.getElementById('largeImage');
-
-// Unhide image elements
-//
-    largeImage.style.display = 'block';
-
-// Show the captured photo
-// The inline CSS rules are used to resize the image
-//
-    largeImage.src = imageURI;
-}
-
-
-function capturePhotoWithFile() {
-    navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
-}
-
 // Called if something bad happens.
 //
 function onFail(message) {
+    selectedWrapper = 0;
     alert('Failed because: ' + message);
 }
 
