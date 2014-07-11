@@ -83,6 +83,8 @@ function createJson(text) {
 
     var optional = json.optional;
 
+    var html = '';
+
     var count = 1;
     $.each(optional, function (key, value) {
         html += '<tr>';
