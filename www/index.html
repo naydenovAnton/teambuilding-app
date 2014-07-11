@@ -244,6 +244,8 @@
             <div class="ui-block-a">
                 <div class="ui-bar ui-bar-a">
                     <img src="img/objects/1.png" width="200">
+                    <img style="display:none;width:200px;" id="smallImage" src="" />
+                    <button onclick="capturePhotoWithFile();">Снимай</button>
                     <form>
                         <input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">
                         <label for="checkbox-mini-0">Намерено</label>
@@ -251,12 +253,6 @@
                 </div>
             </div>
         </div>
-        <button onclick="capturePhotoWithData();">Capture Photo With Image Data</button> <br>
-        <button onclick="capturePhotoWithFile();">Capture Photo With Image File URI</button> <br>
-        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-        <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-        <img style="display:none;" id="largeImage" src="" />
         <!-- /grid-c -->
     </div>
     <div data-role="footer" data-position="fixed" data-theme="b">
