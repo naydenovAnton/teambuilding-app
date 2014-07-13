@@ -278,6 +278,8 @@ function createJson(text) {
             count = 0;
         }
 
-        $('.image_wrap').append(html);
+        $('.image_wrap').append(html).after(function(){
+            $( '.swipebox' ).swipebox();
+        });
     });
 }
