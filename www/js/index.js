@@ -76,10 +76,41 @@ function onPhotoFileSuccess(imageData) {
     if (destinationPath == -1) {
 
         var images = $('.free-image-wrap').find('img').size();
+        var theme = '';
 
-        alert(images);
+        if (images == 0) {
+            theme = 'a';
+        }
 
-        var html = '<div class="ui-block-a">';
+        if (images == 1) {
+            theme = 'b';
+        }
+
+        if (images == 2) {
+            theme = 'c';
+        }
+
+        if (images == 3) {
+            theme = 'd';
+        }
+
+        if (images % 4 == 0) {
+            theme = 'a';
+        }
+
+        if (images % 5 == 0) {
+            theme = 'b';
+        }
+
+        if (images % 6 == 0) {
+            theme = 'c';
+        }
+
+        if (images % 7 == 0) {
+            theme = 'd';
+        }
+
+        var html = '<div class="ui-block-' + theme + '">';
         html += '<div class="ui-bar ui-bar-a">';
         html += '<div style="height: 150px;overflow: hidden">';
         html += '<img src="' + imageData + '" width="200" />';
