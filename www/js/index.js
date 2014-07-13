@@ -74,7 +74,16 @@ function onPhotoDataSuccess(imageData) {
 function onPhotoFileSuccess(imageData) {
 
     if (destinationPath == -1) {
-        alert('da');
+        var html = '<div class="ui-block-' + column + '">';
+        html += '<div class="ui-bar ui-bar-a">';
+        html += '<div style="height: 150px;overflow: hidden">';
+        html += '<img src="' + imageData + '' + image + '" width="200" />';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+
+        $('.free-image-wrap').append(html);
+
     } else {
         var smallImage = document.getElementById('smallImage_' + destinationPath);
         smallImage.style.display = 'block';
