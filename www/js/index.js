@@ -321,10 +321,12 @@ function calculate() {
 
     var result_required = 0;
 
-    $('.required-wrap').find('.requited_slider').each(function (i, item) {
-        result_required += item.val();
 
-        alert(item.val());
+    $('.required-wrap').find('.requited_slider').each(function () {
+
+        result_required += parseInt($(this).val(), 10);
+
+        alert($(this).val());
     });
 
     $('.result-required').text(result_required);
