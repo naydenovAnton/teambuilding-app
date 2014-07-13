@@ -226,7 +226,39 @@ function createJson(text) {
 
     $('.questions-wrap').append(html);
 
+    var count = 0;
     $.each(json.images, function (key, image) {
-//        $('.image_wrap').append('<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width=200; />');
+
+        var column = '';
+
+        if (count == 0) {
+            column = 'a';
+        }
+
+        if (count == 1) {
+            column = 'b';
+        }
+
+        if (count == 2) {
+            column = 'c';
+            count = 0;
+        }
+
+        var html = '<div class="ui-block-' + column + '">';
+        html += '<div class="ui-bar ui-bar-a">';
+        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" />';
+        html += '<img style="display:none;width:200px;" id="smallImage_' + count + '" src=""/>';
+        html += '<button onclick="capturePhotoWithFile(' + count + ');">Снимай</button>';
+        html += '<br>';
+        html += '<form>';
+        html += '<input name="checkbox-mini-' + count + '" id="checkbox-mini-' + count + '" data-mini="true" type="checkbox">';
+        html += '<label for="checkbox-mini-' + count + '">Намерено</label>';
+        html += '</form>';
+        html += '</div>';
+        html += '</div>';
+
+        count++;
+
+        $('.image_wrap').append(html);
     });
 }
