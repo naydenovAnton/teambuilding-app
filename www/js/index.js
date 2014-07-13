@@ -1,5 +1,6 @@
 var pictureSource; // picture source
 var destinationType; // sets the format of returned value
+var destinationPath;
 
 var app = {
     // Application Constructor
@@ -13,8 +14,8 @@ var app = {
         app.receivedEvent('deviceready');
     },
     receivedEvent: function (id) {
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
+        pictureSource = navigator.camera.PictureSourceType;
+        destinationType = navigator.camera.DestinationType;
         loadFile();
     }
 };
@@ -55,7 +56,7 @@ function fail(evt) {
 function onPhotoDataSuccess(imageData) {
 // Get image handle
 //
-    var smallImage = document.getElementById('smallImage');
+    var smallImage = document.getElementById('smallImage' + destinationPath);
 
 // Unhide image elements
 //
@@ -73,7 +74,7 @@ function onPhotoFileSuccess(imageData) {
     console.log(JSON.stringify(imageData));
 // Get image handle
 //
-    var smallImage = document.getElementById('smallImage');
+    var smallImage = document.getElementById('smallImage' + destinationPath);
 
 // Unhide image elements
 //
@@ -109,19 +110,25 @@ function onPhotoURISuccess(imageURI) {
 //
 function capturePhotoWithData() {
 // Take picture using device camera and retrieve image as base64-encoded string
-    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 });
+    navigator.camera.getPicture(onPhotoDataSuccess, onFail, {quality: 50});
 }
 
-function capturePhotoWithFile() {
-    navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+function capturePhotoWithFile(id) {
+    destinationPath = id;
+    navigator.camera.getPicture(onPhotoFileSuccess, onFail, {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI
+    });
 }
 // A button will call this function
 //
 function getPhoto(source) {
 // Retrieve image file location from specified source
-    navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+    navigator.camera.getPicture(onPhotoURISuccess, onFail, {
+        quality: 50,
         destinationType: destinationType.FILE_URI,
-        sourceType: source });
+        sourceType: source
+    });
 }
 
 // Called if something bad happens.
