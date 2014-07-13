@@ -283,7 +283,7 @@
     </div>
     <!-- /header -->
     <div role="main" class="ui-content jqm-content">
-        <table data-role="table" id="my-table" data-mode="reflow">
+        <table data-role="table">
             <thead>
             <tr>
                 <th>Секция</th>
@@ -349,9 +349,12 @@
 
         $.each('.requited_slider', function (i, item) {
             result_required += item.val()
+
+            alert(item.val());
+
         });
 
-        $('.result-required')
+        $('.result-required').text(result_required);
     });
 </script>
 </body>
