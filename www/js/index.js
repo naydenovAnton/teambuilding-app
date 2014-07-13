@@ -252,10 +252,21 @@ function createJson(text) {
 
         var html = '<div class="ui-block-' + column + '">';
         html += '<div class="ui-bar ui-bar-a">';
-        html += '<div style="height: 150px;overflow: hidden"><a href="#popupBasic" data-rel="popup"><img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" /></a></div>';
+        html += '<div style="height: 150px;overflow: hidden">';
+
+        html += '<a href="#popup_' + unique + '" data-rel="popup" data-position-to="window" data-transition="fade">';
+        html += '<img class="popphoto" src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" /></a>';
+        html += '</a>';
+
+        html += '</div>';
+
+        html += '<div data-role="popup" id="#popup_' + unique + '" data-overlay-theme="b" data-theme="b" data-corners="false">';
+        html += '<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>';
+        html += '<img class="popphoto" src="file:///mnt/sdcard/scavenger/images/' + image + '" style="max-height:512px;" alt="">';
+        html += '</div>';
+
         html += '<div style="height: 150px;overflow: hidden"><img style="display:none;width:200px;" id="smallImage_' + unique + '" src=""/></div>';
         html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
-        html += '<br>';
         html += '<form>';
         html += '<input name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
         html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
