@@ -283,7 +283,26 @@
     </div>
     <!-- /header -->
     <div role="main" class="ui-content jqm-content">
-        asd
+        <table data-role="table" id="my-table" data-mode="reflow">
+            <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Movie Title</th>
+                <th>Year</th>
+                <th><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+                <th>Reviews</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>1</th>
+                <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
+                <td>1941</td>
+                <td>100%</td>
+                <td>74</td>
+            </tr>
+            </tbody>
+        </table>
         <!-- /grid-c -->
     </div>
     <div data-role="footer" data-position="fixed" data-theme="b">
@@ -314,7 +333,7 @@
     app.initialize();
 </script>
 <script>
-    $(document).on("pageinit", "#page-result", function (event) {
+    $(document).on("pageshow", "#page-result", function (event) {
         alert('da');
     });
 </script>
