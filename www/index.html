@@ -242,7 +242,7 @@
 </div>
 <!-- /page -->
 
-<div data-role="page" id="page-objecs">
+<div data-role="page" id="page-objecs" class="jqm-demos" data-title="Обекти">
     <div data-role="header" data-theme="b" data-position="fixed">
         <h1>Обекти</h1>
         <a href="#nav-panel-objecs" data-icon="bars" data-iconpos="">Меню</a>
@@ -276,9 +276,9 @@
 </div>
 <!-- /page -->
 
-<div data-role="page" id="page-result">
+<div data-role="page" id="page-result" class="jqm-demos" data-title="Резултати">
     <div data-role="header" data-theme="b" data-position="fixed">
-        <h1>Обекти</h1>
+        <h1>Резултати</h1>
         <a href="#page-result-nav" data-icon="bars" data-iconpos="">Меню</a>
     </div>
     <!-- /header -->
@@ -344,17 +344,7 @@
 </script>
 <script>
     $(document).on("pageshow", "#page-result", function (event) {
-
-        var result_required = 0;
-
-        $.each('.requited_slider', function (i, item) {
-            result_required += item.val()
-
-            alert(item.val());
-
-        });
-
-        $('.result-required').text(result_required);
+        calculate();
     });
 </script>
 </body>

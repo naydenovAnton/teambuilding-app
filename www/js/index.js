@@ -318,6 +318,7 @@ function createJson(text) {
 }
 
 function calculate() {
+    alert('da');
     var result_required = 0;
 
 //    $.each('.requited_slider', function (i, item) {
