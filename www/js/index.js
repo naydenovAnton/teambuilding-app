@@ -265,7 +265,7 @@ function createJson(text) {
         html += '<img class="popphoto" src="file:///mnt/sdcard/scavenger/images/' + image + '" style="max-height:512px;" alt="">';
         html += '</div>';
 
-        html += '<div style="height: 150px;overflow: hidden"><img style="display:none;width:200px;" id="smallImage_' + unique + '" src=""/></div>';
+        html += '<div style="height: 150px;overflow: hidden"><img style="display:none;width:200px;" id="smallImage_' + unique + '" src="img/no_image.gif"/></div>';
         html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
         html += '<form>';
         html += '<input name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
