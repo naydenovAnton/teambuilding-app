@@ -56,7 +56,7 @@ function fail(evt) {
 function onPhotoDataSuccess(imageData) {
 // Get image handle
 //
-    var smallImage = document.getElementById('smallImage' + destinationPath);
+    var smallImage = document.getElementById('smallImage_' + destinationPath);
 
 // Unhide image elements
 //
@@ -74,7 +74,7 @@ function onPhotoFileSuccess(imageData) {
     console.log(JSON.stringify(imageData));
 // Get image handle
 //
-    var smallImage = document.getElementById('smallImage' + destinationPath);
+    var smallImage = document.getElementById('smallImage_' + destinationPath);
 
 // Unhide image elements
 //
@@ -246,7 +246,7 @@ function createJson(text) {
 
         var html = '<div class="ui-block-' + column + '">';
         html += '<div class="ui-bar ui-bar-a">';
-        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" />';
+        html += '<div style="height: 150px;overflow: hidden"><a href="#popupBasic" data-rel="popup"><img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" /></a></div>';
         html += '<img style="display:none;width:200px;" id="smallImage_' + count + '" src=""/>';
         html += '<button onclick="capturePhotoWithFile(' + count + ');">Снимай</button>';
         html += '<br>';
