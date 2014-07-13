@@ -57,6 +57,7 @@ function fail(evt) {
 function onPhotoDataSuccess(imageData) {
 // Get image handle
 //
+
     var smallImage = document.getElementById('smallImage_' + destinationPath);
 
 // Unhide image elements
@@ -71,20 +72,14 @@ function onPhotoDataSuccess(imageData) {
 // Called when a photo is successfully retrieved
 //
 function onPhotoFileSuccess(imageData) {
-// Get image handle
-    console.log(JSON.stringify(imageData));
-// Get image handle
-//
-    var smallImage = document.getElementById('smallImage_' + destinationPath);
 
-// Unhide image elements
-//
-    smallImage.style.display = 'block';
-
-// Show the captured photo
-// The inline CSS rules are used to resize the image
-//
-    smallImage.src = imageData;
+    if (destinationPath == -1) {
+        alert('da');
+    } else {
+        var smallImage = document.getElementById('smallImage_' + destinationPath);
+        smallImage.style.display = 'block';
+        smallImage.src = imageData;
+    }
 }
 
 // Called when a photo is successfully retrieved
@@ -254,13 +249,8 @@ function createJson(text) {
         var html = '<div class="ui-block-' + column + '">';
         html += '<div class="ui-bar ui-bar-a">';
         html += '<div style="height: 150px;overflow: hidden">';
-
-        html += '<a href="file:///mnt/sdcard/scavenger/images/' + image + '" class="swipebox" title="My Caption">'
         html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" />';
-        html += '</a>';
         html += '</div>';
-
-        //html += '<img class="popphoto" src="file:///mnt/sdcard/scavenger/images/' + image + '" style="max-height:512px;" alt="">';
 
 
         html += '<div style="height: 150px;overflow: hidden"><img style="width:200px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
@@ -278,8 +268,7 @@ function createJson(text) {
             count = 0;
         }
 
-        $('.image_wrap').append(html).after(function(){
-            $( '.swipebox' ).swipebox();
+        $('.image_wrap').append(html).after(function () {
         });
     });
 }
