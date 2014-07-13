@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
     <title>H-vision</title>
-    <link rel="stylesheet" href="css/themes/default/jquery.mobile.css">s
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile.css">
+    s
     <link rel="stylesheet" href="css/custom.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.0.min.js"></script>
@@ -38,6 +39,7 @@
             <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
             <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
             <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+            <li><a href="#page-result" data-transition="none">Резултати</a></li>
         </ul>
     </div>
     <!--&lt;!&ndash; /panel &ndash;&gt;-->
@@ -83,6 +85,7 @@
             <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
             <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
             <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+            <li><a href="#page-result" data-transition="none">Резултати</a></li>
         </ul>
     </div>
     <!-- /panel -->
@@ -113,6 +116,7 @@
             <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
             <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
             <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+            <li><a href="#page-result" data-transition="none">Резултати</a></li>
         </ul>
     </div>
     <!-- /panel -->
@@ -142,6 +146,7 @@
             <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
             <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
             <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+            <li><a href="#page-result" data-transition="none">Резултати</a></li>
         </ul>
     </div>
     <!-- /panel -->
@@ -186,6 +191,7 @@
                    class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Избираеми задачи</a></li>
             <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
             <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+            <li><a href="#page-result" data-transition="none">Резултати</a></li>
         </ul>
     </div>
     <!-- /panel -->
@@ -229,6 +235,7 @@
             <li><a href="#page-questions" data-transition="none"
                    class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Въпроси</a></li>
             <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+            <li><a href="#page-result" data-transition="none">Резултати</a></li>
         </ul>
     </div>
     <!-- /panel -->
@@ -262,6 +269,39 @@
             <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
             <li><a href="#page-objecs" data-transition="none"
                    class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Обекти</a></li>
+            <li><a href="#page-result" data-transition="none">Резултати</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+</div>
+<!-- /page -->
+
+<div data-role="page" id="page-result">
+    <div data-role="header" data-theme="b" data-position="fixed">
+        <h1>Обекти</h1>
+        <a href="#page-result-nav" data-icon="bars" data-iconpos="">Меню</a>
+    </div>
+    <!-- /header -->
+    <div role="main" class="ui-content jqm-content">
+        asd
+        <!-- /grid-c -->
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
+    </div>
+    <!-- /footer -->
+    <div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="page-result-nav">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>
+            <li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>
+            <li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>
+            <li><a href="#score-page" data-transition="none">Точкова система</a></li>
+            <li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>
+            <li><a href="#page-free" data-transition="none">Избираеми задачи</a></li>
+            <li><a href="#page-questions" data-transition="none">Въпроси</a></li>
+            <li><a href="#page-objecs" data-transition="none">Обекти</a></li>
+            <li><a href="#page-result" data-transition="none"
+                   class="ui-btn ui-btn-icon-right ui-icon-carat-r ui-btn-active">Резултати</a></li>
         </ul>
     </div>
     <!-- /panel -->
@@ -272,6 +312,11 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
+</script>
+<script>
+    $(document).on("pageinit", "#page-result", function (event) {
+        alert('da');
+    });
 </script>
 </body>
 </html>
