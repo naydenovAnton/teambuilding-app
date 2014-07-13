@@ -286,20 +286,30 @@
         <table data-role="table" id="my-table" data-mode="reflow">
             <thead>
             <tr>
-                <th>Rank</th>
-                <th>Movie Title</th>
-                <th>Year</th>
-                <th><abbr title="Rotten Tomato Rating">Rating</abbr></th>
-                <th>Reviews</th>
+                <th>Секция</th>
+                <th>Точки</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <th>1</th>
-                <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
-                <td>1941</td>
-                <td>100%</td>
-                <td>74</td>
+                <th>Задължителни елементи</th>
+                <td><span class="result-required">0</span></td>
+            </tr>
+            <tr>
+                <th>Избираеми задачи</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Въпроси</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Обекти</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b>Общо</b></th>
+                <td></td>
             </tr>
             </tbody>
         </table>
@@ -334,7 +344,14 @@
 </script>
 <script>
     $(document).on("pageshow", "#page-result", function (event) {
-        alert('da');
+
+        var result_required = 0;
+
+        $.each('.requited_slider', function (i, item) {
+            result_required += item.val()
+        });
+
+        $('.result-required')
     });
 </script>
 </body>
