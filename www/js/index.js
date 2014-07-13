@@ -12,6 +12,7 @@ var app = {
     },
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
+        $('.swipebox').swipebox();
     },
     receivedEvent: function (id) {
         pictureSource = navigator.camera.PictureSourceType;
@@ -254,16 +255,13 @@ function createJson(text) {
         html += '<div class="ui-bar ui-bar-a">';
         html += '<div style="height: 150px;overflow: hidden">';
 
-        html += '<a href="#popup_' + unique + '" data-rel="popup" data-position-to="window" data-transition="fade">';
-        html += '<img class="popphoto" src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" />';
+        html += '<a href="file:///mnt/sdcard/scavenger/images/' + image + '" class="swipebox" title="My Caption">'
+        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" />';
         html += '</a>';
-
         html += '</div>';
 
-        html += '<div data-role="popup" id="#popup_' + unique + '" data-overlay-theme="b" data-theme="b" data-corners="false">';
-        html += '<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>';
-        html += '<img class="popphoto" src="file:///mnt/sdcard/scavenger/images/' + image + '" style="max-height:512px;" alt="">';
-        html += '</div>';
+        //html += '<img class="popphoto" src="file:///mnt/sdcard/scavenger/images/' + image + '" style="max-height:512px;" alt="">';
+
 
         html += '<div style="height: 150px;overflow: hidden"><img style="width:200px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
         html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
