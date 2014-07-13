@@ -253,7 +253,7 @@ function createJson(text) {
         html += '<td><textarea cols="40" rows="8" name="textarea-' + count + ' id="textarea-' + count + '" data-mini="true"></textarea></td>';
         html += '<td>';
         html += '<form>';
-        html += '<select name="flip-q-' + count + '" id="flip-q-' + count + '" data-role="flipswitch" data-theme="b" data-mini="true">';
+        html += '<select class="questions-flip" name="flip-q-' + count + '" id="flip-q-' + count + '" data-role="flipswitch" data-theme="b" data-mini="true">';
         html += '<option value="0">Не</option>';
         html += '<option value="1">Да</option>';
         html += '</select>';
@@ -335,4 +335,17 @@ function calculate() {
     });
 
     $('.result-optional').text(result_optional);
+
+    var result_questions = 0;
+
+    $('.questions-flip').each(function () {
+        if (parseInt($(this).val(), 10) == 1) {
+            result_questions += 10;
+        }
+    });
+
+    $('.result-question').text(result_questions);
+
+
+
 }
