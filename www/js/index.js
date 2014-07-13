@@ -226,5 +226,5 @@ function createJson(text) {
 
     $('.questions-wrap').append(html);
 
-    document.getElementById('anImg').src = "file:///mnt/sdcard/scavenger/1.jpg";
+    document.getElementById('anImg').src = "file:///mnt/sdcard/scavenger/images/1.jpg";
 }
