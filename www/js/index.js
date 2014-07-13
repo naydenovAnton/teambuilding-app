@@ -74,6 +74,11 @@ function onPhotoDataSuccess(imageData) {
 function onPhotoFileSuccess(imageData) {
 
     if (destinationPath == -1) {
+
+        var images = $('.free-image-wrap').find('img').size();
+
+        alert(images);
+
         var html = '<div class="ui-block-a">';
         html += '<div class="ui-bar ui-bar-a">';
         html += '<div style="height: 150px;overflow: hidden">';
