@@ -199,7 +199,7 @@ function createJson(text) {
         html += '<form style="position: absolute;right: 10px;top: -9px;width: 400px;">';
         html += '<div class="ui-field-contain">';
         html += '<label for="slider-' + count + '" style="margin-right:-25px;">Точки:</label>';
-        html += '<input name="slider-' + count + '" id="slider-' + count + '" data-mini="true" min="0" max="100" value="0" type="range">';
+        html += '<input name="slider-' + count + '" id="slider-' + count + '" data-mini="true" min="-50" max="100" value="0" type="range">';
         html += '</div>';
         html += '</form>';
         html += '</h3>';
