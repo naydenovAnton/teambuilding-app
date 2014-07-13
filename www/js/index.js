@@ -228,7 +228,7 @@ function createJson(text) {
 
         html += '<td>';
         html += '<form>';
-        html += '<select name="flip-' + count + '" id="flip-' + count + '" data-role="flipswitch" data-theme="b" data-mini="true">';
+        html += '<select class="zadacha" name="flip-' + count + '" id="flip-' + count + '" data-role="flipswitch" data-theme="b" data-mini="true">';
         html += '<option value="0">Не</option>';
         html += '<option value="1">Да</option>';
         html += '</select>';
@@ -321,13 +321,18 @@ function calculate() {
 
     var result_required = 0;
 
-
     $('.required-wrap').find('.requited_slider').each(function () {
-
         result_required += parseInt($(this).val(), 10);
+    });
+    $('.result-required').text(result_required);
 
-        alert($(this).val());
+    var result_optional = 0;
+
+    $('.zadacha').each(function () {
+        if (parseInt($(this).val(), 10) == 1) {
+            result_optional += 20;
+        }
     });
 
-    $('.result-required').text(result_required);
+    $('.result-optional').text(result_optional);
 }
