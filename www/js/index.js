@@ -300,7 +300,7 @@ function createJson(text) {
         html += '<div style="height: 150px;overflow: hidden"><img style="width:200px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
         html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
         html += '<form>';
-        html += '<input name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
+        html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
         html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
         html += '</form>';
         html += '</div>';
@@ -345,6 +345,16 @@ function calculate() {
     });
 
     $('.result-question').text(result_questions);
+
+    var result_objects = 0;
+
+    $('.object-find').each(function () {
+        if (parseInt($(this).val(), 10) == 1) {
+            result_objects += 40;
+        }
+    });
+
+    $('.result-objects').text(result_objects);
 
 
 
