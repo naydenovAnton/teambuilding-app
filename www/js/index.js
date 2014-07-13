@@ -318,7 +318,7 @@ function createJson(text) {
 }
 
 function calculate() {
-    alert('da');
+    alert($('.required-wrap').html());
     var result_required = 0;
 
 //    $.each('.requited_slider', function (i, item) {
