@@ -264,7 +264,7 @@ function createJson(text) {
         html += '</div>';
 
         count++;
-
+        unique++;
         if (count == 3) {
             count = 0;
         }
