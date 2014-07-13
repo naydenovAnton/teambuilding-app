@@ -227,6 +227,7 @@ function createJson(text) {
     $('.questions-wrap').append(html);
 
     var count = 0;
+    var unique = 0;
     $.each(json.images, function (key, image) {
 
         var column = '';
@@ -244,20 +245,29 @@ function createJson(text) {
             count = 0;
         }
 
+        if (count == 3) {
+            column = 'd';
+            count = 0;
+        }
+
         var html = '<div class="ui-block-' + column + '">';
         html += '<div class="ui-bar ui-bar-a">';
         html += '<div style="height: 150px;overflow: hidden"><a href="#popupBasic" data-rel="popup"><img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" /></a></div>';
-        html += '<img style="display:none;width:200px;" id="smallImage_' + count + '" src=""/>';
-        html += '<button onclick="capturePhotoWithFile(' + count + ');">Снимай</button>';
+        html += '<div style="height: 150px;overflow: hidden"><img style="display:none;width:200px;" id="smallImage_' + unique + '" src=""/></div>';
+        html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
         html += '<br>';
         html += '<form>';
-        html += '<input name="checkbox-mini-' + count + '" id="checkbox-mini-' + count + '" data-mini="true" type="checkbox">';
-        html += '<label for="checkbox-mini-' + count + '">Намерено</label>';
+        html += '<input name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
+        html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
         html += '</form>';
         html += '</div>';
         html += '</div>';
 
         count++;
+
+        if (count == 3) {
+            count = 0;
+        }
 
         $('.image_wrap').append(html);
     });
