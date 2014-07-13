@@ -199,7 +199,7 @@ function createJson(text) {
         html += '<form style="position: absolute;right: 10px;top: -9px;width: 400px;">';
         html += '<div class="ui-field-contain">';
         html += '<label for="slider-' + count + '" style="margin-right:-25px;">Точки:</label>';
-        html += '<input class="requited_sliderrequited_sliderrequited_slider" name="slider-' + count + '" id="slider-' + count + '" data-mini="true" min="-50" max="100" value="0" type="range">';
+        html += '<input class="requited_slider" name="slider-' + count + '" id="slider-' + count + '" data-mini="true" min="-50" max="100" value="0" type="range">';
         html += '</div>';
         html += '</form>';
         html += '</h3>';
@@ -318,7 +318,7 @@ function createJson(text) {
 }
 
 function calculate() {
-    alert($('.required-wrap').html());
+    alert($('.required-wrap').find('.requited_slider').size());
     var result_required = 0;
 
 //    $.each('.requited_slider', function (i, item) {
