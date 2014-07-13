@@ -319,12 +319,16 @@ function createJson(text) {
 
 function calculate() {
 
+    var all = 0;
     var result_required = 0;
 
     $('.required-wrap').find('.requited_slider').each(function () {
         result_required += parseInt($(this).val(), 10);
     });
+
     $('.result-required').text(result_required);
+
+    all += result_required;
 
     var result_optional = 0;
 
@@ -336,6 +340,8 @@ function calculate() {
 
     $('.result-optional').text(result_optional);
 
+    all += result_optional;
+
     var result_questions = 0;
 
     $('.questions-flip').each(function () {
@@ -346,16 +352,19 @@ function calculate() {
 
     $('.result-question').text(result_questions);
 
+    all += result_questions;
+
     var result_objects = 0;
 
     $('.object-find').each(function () {
-        if (parseInt($(this).val(), 10) == 1) {
+        if ($(this).is(":checked")) {
             result_objects += 40;
         }
     });
 
     $('.result-objects').text(result_objects);
 
+    all += result_objects;
 
-
+    $('.all-result').text(all)
 }
