@@ -244,26 +244,27 @@
             <div class="ui-block-a">
                 <div class="ui-bar ui-bar-a">
                     <img src="img/objects/1.png" width="200">
-                    <img style="display:none;width:200px;" id="smallImage" src=""/>
-                    <button onclick="capturePhotoWithFile();">Снимай</button>
+                    <img style="display:none;width:200px;" id="smallImage1" src=""/>
+                    <button onclick="capturePhotoWithFile(1);">Снимай</button>
                     <br>
-
+                    <form>
+                        <input name="checkbox-mini-0" id="checkbox-mini-1" data-mini="true" type="checkbox">
+                        <label for="checkbox-mini-0">Намерено</label>
+                    </form>
+                </div>
+            </div>
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a">
+                    <img src="img/objects/2.png" width="200">
+                    <img style="display:none;width:200px;" id="smallImage2" src=""/>
+                    <button onclick="capturePhotoWithFile(2);">Снимай</button>
+                    <br>
                     <form>
                         <input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">
                         <label for="checkbox-mini-0">Намерено</label>
                     </form>
                 </div>
             </div>
-            <button onclick="capturePhotoWithData();">Capture Photo With Image Data</button>
-            <br>
-            <button onclick="capturePhotoWithFile();">Capture Photo With Image File URI</button>
-            <br>
-            <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button>
-            <br>
-            <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button>
-            <br>
-            <img style="display:none;width:60px;height:60px;" id="smallImage" src=""/>
-            <img style="display:none;" id="largeImage" src=""/>
             <!--<div class="ui-block-b">-->
             <!--<div class="ui-bar ui-bar-a">-->
             <!--<img src="img/objects/2.png" width="200">-->
