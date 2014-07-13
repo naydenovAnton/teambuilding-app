@@ -322,12 +322,9 @@ function calculate() {
     var result_required = 0;
 
     $('.required-wrap').find('.requited_slider').each(function (i, item) {
-        $.each('.requited_slider', function (i, item) {
-            result_required += item.val();
+        result_required += item.val();
 
-            alert(item.val());
-
-        });
+        alert(item.val());
     });
 
     $('.result-required').text(result_required);
