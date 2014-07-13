@@ -226,9 +226,5 @@ function createJson(text) {
 
     $('.questions-wrap').append(html);
 
-    var anImg= document.createElement('img');
-    anImg.src = "file:///mnt/sdcard/scavenger/images/1.jpg";
-    anImg.width="200px"; // consider adding width
-    anImg.height="150px";  // consider adding height
-    document.getElementById("img_wrap").appendChild(anImg);
+    document.getElementById('anImg').src = "file:///mnt/sdcard/scavenger/1.jpg";
 }
