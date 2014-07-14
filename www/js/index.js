@@ -78,43 +78,61 @@ function onPhotoFileSuccess(imageData) {
         var images = $('.free-image-wrap').find('img').size();
         var theme = '';
 
-        if (images == 0) {
-            theme = 'a';
-        }
+//        if (images == 0) {
+//            theme = 'a';
+//        }
+//
+//        if (images == 1) {
+//            theme = 'b';
+//        }
+//
+//        if (images % 2 == 0) {
+//            theme = 'a';
+//        }
+//
+//        if (images % 3 == 0) {
+//            theme = 'b';
+//        }
+//
+//        if (images % 5 == 0) {
+//            theme = 'b';
+//        }
+//
+//        if (images % 7 == 0) {
+//            theme = 'b';
+//        }
+//
 
-        if (images == 1) {
-            theme = 'b';
-        }
 
-        if (images == 2) {
-            theme = 'c';
-        }
-
-        if (images == 3) {
-            theme = 'd';
-        }
-
-        if (images % 4 == 0) {
-            theme = 'a';
-        }
-
-        if (images % 5 == 0) {
-            theme = 'b';
-        }
-
-        if (images % 6 == 0) {
-            theme = 'c';
-        }
-
-        if (images % 7 == 0) {
-            theme = 'd';
-        }
+//        if (images == 2) {
+//            theme = 'c';
+//        }
+//
+//        if (images == 3) {
+//            theme = 'd';
+//        }
+//
+//        if (images % 4 == 0) {
+//            theme = 'a';
+//        }
+//
+//        if (images % 5 == 0) {
+//            theme = 'b';
+//        }
+//
+//        if (images % 6 == 0) {
+//            theme = 'c';
+//        }
+//
+//        if (images % 7 == 0) {
+//            theme = 'd';
+//        }
 
         var html = '<div class="ui-block-' + theme + '">';
         html += '<div class="ui-bar ui-bar-a">';
-        html += '<div style="height: 150px;overflow: hidden">';
-        html += '<img src="' + imageData + '" width="200" />';
-        html += '</div>';
+        //html += '<div style="height: 150px;overflow: hidden">';
+        html += '<img src="' + imageData + '" width="500" />';
+        //html += '</div>';
         html += '</div>';
         html += '</div>';
 
@@ -292,12 +310,12 @@ function createJson(text) {
 
         var html = '<div class="ui-block-' + column + '">';
         html += '<div class="ui-bar ui-bar-a">';
-        html += '<div style="height: 300px;overflow: hidden">';
-        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="400" />';
+        html += '<div style="height: 200px;overflow: hidden">';
+        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="300" />';
         html += '</div>';
 
 
-        html += '<div style="height: 300px;overflow: hidden"><img style="width:400px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
+        html += '<div style="height: 200px;overflow: hidden"><img style="width:300px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
         html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
         html += '<form>';
         html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
