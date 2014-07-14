@@ -280,24 +280,24 @@ function createJson(text) {
             column = 'b';
         }
 
-        if (count == 2) {
-            column = 'c';
-            count = 0;
-        }
-
-        if (count == 3) {
-            column = 'd';
-            count = 0;
-        }
+//        if (count == 2) {
+//            column = 'c';
+//            count = 0;
+//        }
+//
+//        if (count == 3) {
+//            column = 'd';
+//            count = 0;
+//        }
 
         var html = '<div class="ui-block-' + column + '">';
         html += '<div class="ui-bar ui-bar-a">';
-        html += '<div style="height: 150px;overflow: hidden">';
-        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="200" />';
+        html += '<div style="height: 300px;overflow: hidden">';
+        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="400" />';
         html += '</div>';
 
 
-        html += '<div style="height: 150px;overflow: hidden"><img style="width:200px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
+        html += '<div style="height: 300px;overflow: hidden"><img style="width:400px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
         html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
         html += '<form>';
         html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
@@ -308,7 +308,7 @@ function createJson(text) {
 
         count++;
         unique++;
-        if (count == 3) {
+        if (count == 1) {
             count = 0;
         }
 
