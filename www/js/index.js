@@ -221,9 +221,9 @@ function createJson(text) {
         html += '</div>';
         html += '</form>';
         html += '</h3>';
-        html += '<div><pre>';
+        html += '<div>';
         html += value.description;
-        html += '</pre></div>';
+        html += '</div>';
         html += '</div>';
 
         count++;
