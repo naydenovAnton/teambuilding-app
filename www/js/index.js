@@ -19,8 +19,8 @@ var app = {
     },
     receivedEvent: function (id) {
         alert('2');
-        //pictureSource = navigator.camera.PictureSourceType;
-        //destinationType = navigator.camera.DestinationType;
+        pictureSource = navigator.camera.PictureSourceType;
+        destinationType = navigator.camera.DestinationType;
         loadFile();
     }
 };
