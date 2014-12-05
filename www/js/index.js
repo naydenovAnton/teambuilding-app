@@ -5,17 +5,20 @@ var destinationPath;
 var app = {
     // Application Constructor
     initialize: function () {
-        alert('da');
         this.bindEvents();
     },
     bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function () {
+
+        alert('1');
+
         app.receivedEvent('deviceready');
         $('.swipebox').swipebox();
     },
     receivedEvent: function (id) {
+        alert('2');
         pictureSource = navigator.camera.PictureSourceType;
         destinationType = navigator.camera.DestinationType;
         loadFile();
@@ -23,6 +26,7 @@ var app = {
 };
 
 function loadFile() {
+    alert('3');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 }
 
