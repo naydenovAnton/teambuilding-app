@@ -27,7 +27,7 @@ var app = {
 
 function loadFile() {
     alert('3');
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail1);
 }
 
 function gotFS(fileSystem) {
@@ -55,7 +55,11 @@ function readAsText(file) {
 }
 
 function fail(evt) {
-    alert(evt.target.error.code);
+    alert('ebasi');
+}
+
+function fail1(evt) {
+    alert('da go eba');
 }
 
 
