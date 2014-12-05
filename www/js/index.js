@@ -32,7 +32,7 @@ function loadFile() {
 
 function gotFS(fileSystem) {
     alert('4');
-    fileSystem.root.getFile("/sdcard/scavenger/data/config.txt", null, gotFileEntry, fail);
+    fileSystem.root.getFile("/sdcard/scavenger/data/config.txt", {create: true, exclusive: false}, gotFileEntry, fail);
 }
 
 function gotFileEntry(fileEntry) {
