@@ -97,4 +97,7 @@
 </feature>
     <gap:platform name="android" />
 
+    <gap:plugin name="org.apache.cordova.camera" />
+
+
 </widget>
