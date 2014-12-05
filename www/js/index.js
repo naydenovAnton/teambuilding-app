@@ -5,6 +5,7 @@ var destinationPath;
 var app = {
     // Application Constructor
     initialize: function () {
+        alert('da');
         this.bindEvents();
     },
     bindEvents: function () {
