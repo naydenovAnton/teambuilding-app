@@ -38,7 +38,6 @@ function gotFile(file) {
 }
 
 function readAsText(file) {
-    alert('7');
     var reader = new FileReader();
     reader.onloadend = function (evt) {
         createJson(evt.target.result);
@@ -208,6 +207,7 @@ function createJson(text) {
     $('.scavenger-title').text(json.title);
     $('.homePageText').text(json.message);
     $('.score-wrap').html(json.scores);
+    alert(json.scores);
     $('.info-wrap').html(json.instructions);
 
     var required = json.required;
