@@ -31,18 +31,22 @@ function loadFile() {
 }
 
 function gotFS(fileSystem) {
+    alert('4');
     fileSystem.root.getFile("/sdcard/scavenger/data/config.txt", null, gotFileEntry, fail);
 }
 
 function gotFileEntry(fileEntry) {
+    alert('5');
     fileEntry.file(gotFile, fail);
 }
 
 function gotFile(file) {
+    alert('6');
     readAsText(file);
 }
 
 function readAsText(file) {
+    alert('7');
     var reader = new FileReader();
     reader.onloadend = function (evt) {
         createJson(evt.target.result);
