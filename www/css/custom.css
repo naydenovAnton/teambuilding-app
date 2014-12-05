@@ -15,3 +15,7 @@
 .ui-page {
     -webkit-backface-visibility: hidden;
 }
+
+b {
+	font-weight: bold;
+}
