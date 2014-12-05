@@ -11,14 +11,10 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function () {
-
-        alert('1');
-
         app.receivedEvent('deviceready');
         $('.swipebox').swipebox();
     },
     receivedEvent: function (id) {
-        alert('2');
         pictureSource = navigator.camera.PictureSourceType;
         destinationType = navigator.camera.DestinationType;
         loadFile();
@@ -26,22 +22,18 @@ var app = {
 };
 
 function loadFile() {
-    alert('3');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail1);
 }
 
 function gotFS(fileSystem) {
-    alert('4');
     fileSystem.root.getFile("scavenger/data/config.txt", {}, gotFileEntry, fail);
 }
 
 function gotFileEntry(fileEntry) {
-    alert('5');
     fileEntry.file(gotFile, fail);
 }
 
 function gotFile(file) {
-    alert('6');
     readAsText(file);
 }
 
@@ -55,11 +47,11 @@ function readAsText(file) {
 }
 
 function fail(evt) {
-    alert('ebasi');
+    alert('alert');
 }
 
 function fail1(evt) {
-    alert('da go eba');
+    alert('alert');
 }
 
 
