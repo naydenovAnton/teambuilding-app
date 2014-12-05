@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
     <title>H-vision</title>
     <link rel="stylesheet" href="css/themes/default/jquery.mobile.css">
-    s
     <link rel="stylesheet" href="css/custom.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.0.min.js"></script>
@@ -13,7 +12,7 @@
 <body>
 <div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="<span class='scavenger-title'></span>">
     <div data-role="header" data-position="fixed" data-theme="b">
-        <h1><span class='scavenger-title'></span></h1>
+        <h1 style="color:red"><span class='scavenger-title'></span></h1>
         <a href="#nav-panel-home" data-icon="bars" data-iconpos="">Меню</a>
         <!--<a href="#add-form" data-icon="gear" data-iconpos="">Добави участници</a>-->
     </div>
@@ -227,7 +226,6 @@
         <ul data-role="listview">
             <li data-icon="delete"><a href="#" data-rel="close">Затвори</a></li>
             <li><a href="#panel-fixed-page1" data-transition="none">Налало</a></li>
-            <li><a href="#page-video" data-transition="none">Видео представяне</a></li>
             <li><a href="#page-welcome-text" data-transition="none">Текстово представяне</a></li>
             <li><a href="#score-page" data-transition="none">Точкова система</a></li>
             <li><a href="#page-required" data-transition="none">Задължителни елементи</a></li>
@@ -343,7 +341,7 @@
     app.initialize();
 </script>
 <script>
-    $(document).on("pageshow", "#page-result", function (event) {
+    $(document).on("pageshow", "#page-result", function () {
         calculate();
     });
 </script>
