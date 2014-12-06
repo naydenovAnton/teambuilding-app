@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/custom.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.0.min.js"></script>
+    <style>
+        b {
+            font-weight: bold !important;
+        }
+
+        h2 {
+            font-size: 16px !important;
+            font-weight: bold !important;
+        }
+    </style>
 </head>
 <body>
 <div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="<span class='scavenger-title'></span>">
@@ -128,7 +138,11 @@
         <a href="#nav-panel-required" data-icon="bars" data-iconpos="">Меню</a>
     </div>
     <!-- /header -->
-    <div role="main" class="ui-content jqm-content required-wrap">
+    <div role="main" class="ui-content jqm-content ">
+        Задачите от тази секция са задължителни и при изпълнение ви носят 50 т./елемент.
+        Неизпълнението се санкционира с - 50 т./елемент.
+        <div class="required-wrap">
+        </div>
     </div>
     <div data-role="footer" data-position="fixed" data-theme="b">
         <h4>Powerd by <b style='color:#B9C302'>H-vision</b></h4>
