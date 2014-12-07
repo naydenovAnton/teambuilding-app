@@ -132,12 +132,12 @@ function onPhotoFileSuccess(imageData) {
 //            theme = 'd';
 //        }
 
-        var html = '<div class="ui-block-' + theme + '">';
-        //html += '<div class="ui-bar ui-bar-a">';
+        var html = '<div>';
+        //html += '<div class="ui-bar">';
         //html += '<div style="height: 150px;overflow: hidden">';
         html += '<img src="' + imageData + '" width="800" />';
-        //html += '</div>';
-       //html += '</div>';
+       // html += '</div>';
+       // html += '</div>';
         html += '</div>';
 
         $('.free-image-wrap').append(html)
