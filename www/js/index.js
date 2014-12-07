@@ -132,7 +132,7 @@ function onPhotoFileSuccess(imageData) {
 //            theme = 'd';
 //        }
 
-        var html = '<div>';
+        var html = '<div style="padding: 20px;margin-top: 10px;background-color: #F5F5F5">';
         //html += '<div class="ui-bar">';
         //html += '<div style="height: 150px;overflow: hidden">';
         html += '<img src="' + imageData + '" width="800" />';
