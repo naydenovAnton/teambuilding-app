@@ -1,17 +1,27 @@
-#page-video, #page-welcome-text, #page-questions, #page-free, #page-score,#page-required,  .ui-panel-wrapper {
-	background-image: url(../img/background_opacity.png) !important;
-	background-repeat: no-repeat !important;
-	background-position: center center !important;
- 	background-size:350px 428px !important;
+#page-video, #page-welcome-text, #page-questions, #page-free, #page-score, #page-required, .ui-panel-wrapper {
+    background-image: url(../img/background_opacity.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 350px 428px !important;
 }
 
-#panel-fixed-page1 , #panel-fixed-page1 .ui-panel-wrapper {
-	background-image: url(../img/background_opacity.png) !important;
-	background-repeat: no-repeat !important;
-	background-position: center center !important;
- 	background-size:350px 428px !important;
+#panel-fixed-page1, #panel-fixed-page1 .ui-panel-wrapper {
+    background-image: url(../img/background_opacity.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 350px 428px !important;
 }
 
 .ui-page {
     -webkit-backface-visibility: hidden;
+}
+
+.rounded {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #E9E7E8;
 }
