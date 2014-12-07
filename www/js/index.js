@@ -207,7 +207,6 @@ function createJson(text) {
     $('.scavenger-title').text(json.title);
     $('.homePageText').text(json.message);
     $('.score-wrap').html(json.scores);
-    alert(json.instructions);
     $('.info-wrap').html(json.instructions);
 
     var required = json.required;
