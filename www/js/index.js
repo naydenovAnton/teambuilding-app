@@ -79,24 +79,24 @@ function onPhotoFileSuccess(imageData) {
 
     if (destinationPath == -1) {
 
-        var images = $('.free-image-wrap').find('img').size();
-        var theme = '';
-
-        if (images == 0) {
-            theme = 'a';
-        }
-
-        if (images == 1) {
-            theme = 'b';
-        }
-
-        if (images % 2 == 0) {
-            theme = 'a';
-        }
-
-        if (images % 3 == 0) {
-            theme = 'b';
-        }
+        //var images = $('.free-image-wrap').find('img').size();
+        //var theme = '';
+        //
+        //if (images == 0) {
+        //    theme = 'a';
+        //}
+        //
+        //if (images == 1) {
+        //    theme = 'b';
+        //}
+        //
+        //if (images % 2 == 0) {
+        //    theme = 'a';
+        //}
+        //
+        //if (images % 3 == 0) {
+        //    theme = 'b';
+        //}
 //
 //        if (images % 5 == 0) {
 //            theme = 'b';
@@ -133,11 +133,11 @@ function onPhotoFileSuccess(imageData) {
 //        }
 
         var html = '<div class="ui-block-' + theme + '">';
-        html += '<div class="ui-bar ui-bar-a">';
+        //html += '<div class="ui-bar ui-bar-a">';
         //html += '<div style="height: 150px;overflow: hidden">';
-        html += '<img src="' + imageData + '" width="400" />';
+        html += '<img src="' + imageData + '" width="800" />';
         //html += '</div>';
-        html += '</div>';
+       //html += '</div>';
         html += '</div>';
 
         $('.free-image-wrap').append(html)
