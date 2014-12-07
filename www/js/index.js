@@ -82,21 +82,21 @@ function onPhotoFileSuccess(imageData) {
         var images = $('.free-image-wrap').find('img').size();
         var theme = '';
 
-//        if (images == 0) {
-//            theme = 'a';
-//        }
-//
-//        if (images == 1) {
-//            theme = 'b';
-//        }
-//
-//        if (images % 2 == 0) {
-//            theme = 'a';
-//        }
-//
-//        if (images % 3 == 0) {
-//            theme = 'b';
-//        }
+        if (images == 0) {
+            theme = 'a';
+        }
+
+        if (images == 1) {
+            theme = 'b';
+        }
+
+        if (images % 2 == 0) {
+            theme = 'a';
+        }
+
+        if (images % 3 == 0) {
+            theme = 'b';
+        }
 //
 //        if (images % 5 == 0) {
 //            theme = 'b';
