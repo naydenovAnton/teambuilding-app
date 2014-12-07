@@ -135,7 +135,7 @@ function onPhotoFileSuccess(imageData) {
         var html = '<div style="padding: 20px;margin-top: 10px;background-color: #E9E7E8">';
         //html += '<div class="ui-bar">';
         //html += '<div style="height: 150px;overflow: hidden">';
-        html += '<img src="' + imageData + '" width="870" />';
+        html += '<img src="' + imageData + '" width="890" />';
        // html += '</div>';
        // html += '</div>';
         html += '</div>';
