@@ -292,12 +292,12 @@ function createJson(text) {
     var unique = 0;
     $.each(json.images, function (key, image) {
 
-        var html = '<div class="rounded">';
-        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="890" />';
+        var html = '<div class="rounded" style="width: 440px">';
+        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="400" />';
         html += '<hr />';
         html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
         html += '<hr />';
-        html += '<img style="width:890px;" id="smallImage_' + unique + '" src="img/no_image.gif" />';
+        html += '<img style="width:400px;" id="smallImage_' + unique + '" src="img/no_image.gif" />';
         html += '<form>';
         html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
         html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
@@ -305,8 +305,8 @@ function createJson(text) {
 
         unique++;
 
-        $('.image_wrap').append(html).after(function () {
-        });
+        $('.image_wrap_1').append(html);
+        $('.image_wrap_1').append(html);
     });
 }
 
