@@ -293,31 +293,15 @@ function createJson(text) {
     $.each(json.images, function (key, image) {
 
         var html = '<div class="rounded">';
-        hrml += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="800" />';
-        html += '<hr />';
-        html += '<img style="width:800px;" id="smallImage_' + unique + '" src="img/no_image.gif" />';
-        html += '<form>';
-        html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
-        html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
-        html += '</div>';
-
-
-        //var html = '<div class="ui-block-' + column + '">';
-        ////html += '<div class="ui-bar ui-bar-a">';
-        ////html += '<div style="height: 200px;overflow: hidden">';
-        //html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="800" />';
-        //html += '</div>';
-        //
-        //
-        //html += '<div style="height: 200px;overflow: hidden"><img style="width:800px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
-        //html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
+        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="800" />';
+        //html += '<hr />';
+        //html += '<img style="width:800px;" id="smallImage_' + unique + '" src="img/no_image.gif" />';
         //html += '<form>';
         //html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
         //html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
-        //html += '</form>';
-        ////html += '</div>';
-        //html += '</div>';
+        html += '</div>';
 
+        unique++;
 
         $('.image_wrap').append(html).after(function () {
         });
