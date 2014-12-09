@@ -306,7 +306,7 @@ function createJson(text) {
         unique++;
 
         $('.image_wrap_1').append(html);
-        $('.image_wrap_1').append(html);
+        $('.image_wrap_2').append(html);
     });
 }
 
