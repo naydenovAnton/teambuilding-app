@@ -136,8 +136,8 @@ function onPhotoFileSuccess(imageData) {
         //html += '<div class="ui-bar">';
         //html += '<div style="height: 150px;overflow: hidden">';
         html += '<img src="' + imageData + '" width="890" />';
-       // html += '</div>';
-       // html += '</div>';
+        // html += '</div>';
+        // html += '</div>';
         html += '</div>';
 
         $('.free-image-wrap').append(html)
@@ -293,12 +293,12 @@ function createJson(text) {
     $.each(json.images, function (key, image) {
 
         var html = '<div class="rounded">';
-        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="800" />';
-        //html += '<hr />';
-        //html += '<img style="width:800px;" id="smallImage_' + unique + '" src="img/no_image.gif" />';
-        //html += '<form>';
-        //html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
-        //html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
+        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="890" />';
+        html += '<hr />';
+        html += '<img style="width:890px;" id="smallImage_' + unique + '" src="img/no_image.gif" />';
+        html += '<form>';
+        html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
+        html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
         html += '</div>';
 
         unique++;
