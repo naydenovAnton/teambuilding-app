@@ -303,10 +303,13 @@ function createJson(text) {
         html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
         html += '</div>';
 
-        unique++;
+        if (count % 2) {
+            $('.image_wrap_1').append(html);
+        } else {
+            $('.image_wrap_2').append(html);
+        }
 
-        $('.image_wrap_1').append(html);
-        $('.image_wrap_2').append(html);
+        unique++;
     });
 }
 
