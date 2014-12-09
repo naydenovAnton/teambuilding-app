@@ -292,7 +292,7 @@ function createJson(text) {
     var unique = 0;
     $.each(json.images, function (key, image) {
 
-        var html = '<div class="rounded" style="width: 480px">';
+        var html = '<div class="rounded" style="width: 440px">';
         html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="400" />';
         html += '<hr />';
         html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
@@ -305,8 +305,8 @@ function createJson(text) {
 
         unique++;
 
-        $('.image_wrap_1').append(html);
-        $('.image_wrap_2').append(html);
+        //$('.image_wrap_1').append(html);
+        //$('.image_wrap_2').append(html);
     });
 }
 
