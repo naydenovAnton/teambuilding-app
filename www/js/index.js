@@ -79,59 +79,6 @@ function onPhotoFileSuccess(imageData) {
 
     if (destinationPath == -1) {
 
-        //var images = $('.free-image-wrap').find('img').size();
-        //var theme = '';
-        //
-        //if (images == 0) {
-        //    theme = 'a';
-        //}
-        //
-        //if (images == 1) {
-        //    theme = 'b';
-        //}
-        //
-        //if (images % 2 == 0) {
-        //    theme = 'a';
-        //}
-        //
-        //if (images % 3 == 0) {
-        //    theme = 'b';
-        //}
-//
-//        if (images % 5 == 0) {
-//            theme = 'b';
-//        }
-//
-//        if (images % 7 == 0) {
-//            theme = 'b';
-//        }
-//
-
-
-//        if (images == 2) {
-//            theme = 'c';
-//        }
-//
-//        if (images == 3) {
-//            theme = 'd';
-//        }
-//
-//        if (images % 4 == 0) {
-//            theme = 'a';
-//        }
-//
-//        if (images % 5 == 0) {
-//            theme = 'b';
-//        }
-//
-//        if (images % 6 == 0) {
-//            theme = 'c';
-//        }
-//
-//        if (images % 7 == 0) {
-//            theme = 'd';
-//        }
-
         var html = '<div class="rounded">';
         //html += '<div class="ui-bar">';
         //html += '<div style="height: 150px;overflow: hidden">';
@@ -140,7 +87,17 @@ function onPhotoFileSuccess(imageData) {
         // html += '</div>';
         html += '</div>';
 
-        $('.free-image-wrap').append(html)
+        $('.required-image-wrap').append(html);
+    } else if(destinationPath == -5) {
+        var html = '<div class="rounded">';
+        //html += '<div class="ui-bar">';
+        //html += '<div style="height: 150px;overflow: hidden">';
+        html += '<img src="' + imageData + '" width="890" />';
+        // html += '</div>';
+        // html += '</div>';
+        html += '</div>';
+
+        $('.free-image-wrap').append(html);
     } else {
         var smallImage = document.getElementById('smallImage_' + destinationPath);
         smallImage.style.display = 'block';
