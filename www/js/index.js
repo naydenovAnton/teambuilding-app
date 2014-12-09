@@ -292,47 +292,32 @@ function createJson(text) {
     var unique = 0;
     $.each(json.images, function (key, image) {
 
-        var column = '';
-
-        if (count == 0) {
-            column = 'a';
-        }
-
-        if (count == 1) {
-            column = 'b';
-        }
-
-//        if (count == 2) {
-//            column = 'c';
-//            count = 0;
-//        }
-//
-//        if (count == 3) {
-//            column = 'd';
-//            count = 0;
-//        }
-
-        var html = '<div class="ui-block-' + column + '">';
-        html += '<div class="ui-bar ui-bar-a">';
-        html += '<div style="height: 200px;overflow: hidden">';
-        html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="300" />';
-        html += '</div>';
-
-
-        html += '<div style="height: 200px;overflow: hidden"><img style="width:300px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
-        html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
+        var html = '<div class="rounded">';
+        hrml += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="800" />';
+        html += '<hr />';
+        html += '<img style="width:800px;" id="smallImage_' + unique + '" src="img/no_image.gif" />';
         html += '<form>';
         html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
         html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
-        html += '</form>';
-        html += '</div>';
         html += '</div>';
 
-        count++;
-        unique++;
-        if (count == 1) {
-            count = 0;
-        }
+
+        //var html = '<div class="ui-block-' + column + '">';
+        ////html += '<div class="ui-bar ui-bar-a">';
+        ////html += '<div style="height: 200px;overflow: hidden">';
+        //html += '<img src="file:///mnt/sdcard/scavenger/images/' + image + '" width="800" />';
+        //html += '</div>';
+        //
+        //
+        //html += '<div style="height: 200px;overflow: hidden"><img style="width:800px;" id="smallImage_' + unique + '" src="img/no_image.gif" /></div>';
+        //html += '<button onclick="capturePhotoWithFile(' + unique + ');">Снимай</button>';
+        //html += '<form>';
+        //html += '<input class="object-find" name="checkbox-mini-' + unique + '" id="checkbox-mini-' + unique + '" data-mini="true" type="checkbox">';
+        //html += '<label for="checkbox-mini-' + unique + '">Намерено</label>';
+        //html += '</form>';
+        ////html += '</div>';
+        //html += '</div>';
+
 
         $('.image_wrap').append(html).after(function () {
         });
