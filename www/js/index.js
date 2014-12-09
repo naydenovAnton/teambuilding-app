@@ -87,7 +87,7 @@ function onPhotoFileSuccess(imageData) {
         // html += '</div>';
         html += '</div>';
 
-        $('.required-image-wrap').append(html);
+        $('.free-image-wrap').append(html);
     } else if(destinationPath == -5) {
         var html = '<div class="rounded">';
         //html += '<div class="ui-bar">';
@@ -97,7 +97,7 @@ function onPhotoFileSuccess(imageData) {
         // html += '</div>';
         html += '</div>';
 
-        $('.free-image-wrap').append(html);
+        $('.required-image-wrap').append(html);
     } else {
         var smallImage = document.getElementById('smallImage_' + destinationPath);
         smallImage.style.display = 'block';
