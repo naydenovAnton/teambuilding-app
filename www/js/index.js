@@ -203,7 +203,7 @@ function createJson(text) {
     $.each(optional, function (key, value) {
         html += '<tr>';
         html += '<th>' + count + '</th>';
-        html += '<th>' + value.description + '</th>';
+        html += '<th style="font-weight: normal;">' + value.description + '</th>';
 
         html += '<td>';
         html += '<form>';
