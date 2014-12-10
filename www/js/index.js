@@ -228,7 +228,7 @@ function createJson(text) {
     $.each(questions, function (key, value) {
         html += '<tr>';
         html += '<th>' + count + '</th>';
-        html += '<th>' + value.description + '</th>';
+        html += '<th style="font-weight: normal;">' + value.description + '</th>';
         html += '<td><textarea cols="40" rows="8" name="textarea-' + count + ' id="textarea-' + count + '" data-mini="true"></textarea></td>';
         html += '<td>';
         html += '<form>';
